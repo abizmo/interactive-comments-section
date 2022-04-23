@@ -1,8 +1,11 @@
 import React from 'react';
+import Theme from './theme';
 
 function App() {
   return (
-    <h1>Interactive comments section</h1>
+    <Theme>
+      <h1>Interactive comments section</h1>
+    </Theme>
   );
 }
 
