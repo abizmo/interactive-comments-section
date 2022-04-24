@@ -1,25 +1,45 @@
+import { fireEvent, render, screen } from '@testing-library/react';
 import React from 'react';
-// import { render, screen } from '@testing-library/react';
-import renderer from 'react-test-renderer';
-
 import 'jest-styled-components';
 
-import { ThemeProvider } from 'styled-components';
 import Button from '../../../components/Button';
-import theme from '../../../theme/theme';
+import Theme from '../../../theme';
 
 test('renders default button and match snapshot', () => {
-  const testRenderer = renderer.create(
-    <ThemeProvider theme={theme}>
-      <Button label="Test" onClick={jest.fn} />
-    </ThemeProvider>,
+  const handleClick = jest.fn();
+  const { container, getByText } = render(
+    <Theme>
+      <Button label="Test" onClick={handleClick} />
+    </Theme>,
   );
 
-  const testInstance = testRenderer.root;
+  const result = getByText(/Test/);
+  expect(container).toMatchSnapshot();
+  expect(result).toHaveStyle('background: transparent');
+  expect(result).toHaveStyle('color: hsl( 211, 10%, 45%)');
+  expect(result.getAttribute('color')).toEqual('neutral');
 
-  expect(testRenderer.toJSON()).toMatchSnapshot();
-  expect(testInstance.findByType(Button).props.color).toBe('neutral');
-  expect(testInstance.findByType(Button).props.size).toBe('fit');
-  expect(testInstance.findByType(Button).props.variant).toBe('text');
-  expect(testInstance.findByType('button').children).toEqual(['Test']);
+  fireEvent.click(screen.getByText(/Test/));
+  expect(handleClick).toHaveBeenCalled();
+});
+
+test('renders primary contained button and match snapshot', () => {
+  const { container, getByText } = render(
+    <Theme>
+      <Button
+        color="primary"
+        label="Test"
+        onClick={jest.fn}
+        size="big"
+        variant="contained"
+      />
+    </Theme>,
+  );
+
+  const result = getByText(/Test/);
+  expect(container).toMatchSnapshot();
+  expect(result).toHaveStyle('background: hsl(238, 40%, 52%)');
+  expect(result).toHaveStyle('color: hsl( 0, 0%, 100%)');
+  expect(result).toHaveStyle('width: 8.75rem');
+  expect(result.getAttribute('color')).toEqual('primary');
 });
