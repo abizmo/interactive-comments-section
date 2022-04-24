@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default button and match snapshot 1`] = `
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: hsl( 211,10%,45%);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 500;
+  gap: .5rem;
+  height: 3rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1.1;
+  padding: 0;
+}
+
+<button
+  className="c0"
+  color="neutral"
+  onClick={[Function]}
+  size="fit"
+  type="button"
+>
+  Test
+</button>
+`;
