@@ -6,7 +6,7 @@ import { ReactComponent as Reply } from './assets/icons/reply.svg';
 import Button from './components/Button';
 import Theme from './theme';
 
-function doNothing() {};
+function doNothing() {}
 
 function App() {
   return (
