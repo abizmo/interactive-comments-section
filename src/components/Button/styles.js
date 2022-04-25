@@ -19,6 +19,11 @@ export const Btn = styled.button`
   justify-content: center;
   line-height: 1.1;
   padding: 0;
+  transition: opacity 300ms ease-in;
+
+  &:hover {
+    opacity: .4;
+  }
 `;
 
 export const BtnContained = styled(Btn)`

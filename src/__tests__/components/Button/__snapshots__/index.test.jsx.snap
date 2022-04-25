@@ -24,6 +24,12 @@ exports[`renders default button and match snapshot 1`] = `
   justify-content: center;
   line-height: 1.1;
   padding: 0;
+  -webkit-transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-in;
+}
+
+.c0:hover {
+  opacity: .4;
 }
 
 <div>
@@ -61,6 +67,12 @@ exports[`renders primary contained button and match snapshot 1`] = `
   justify-content: center;
   line-height: 1.1;
   padding: 0;
+  -webkit-transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-in;
+}
+
+.c0:hover {
+  opacity: .4;
 }
 
 .c1 {
