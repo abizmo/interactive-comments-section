@@ -1,5 +1,4 @@
 import React from 'react';
-import Theme from './theme';
 
 import { ReactComponent as Delete } from './assets/icons/delete.svg';
 import { ReactComponent as Edit } from './assets/icons/edit.svg';
