@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default button and match snapshot 1`] = `
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: hsl( 211,10%,45%);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 500;
+  gap: .5rem;
+  height: 3rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1.1;
+  padding: 0;
+  -webkit-transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-in;
+}
+
+.c0:hover {
+  opacity: .4;
+}
+
+<div>
+  <button
+    class="c0"
+    color="neutral"
+    type="button"
+  >
+    Test
+  </button>
+</div>
+`;
+
+exports[`renders primary contained button and match snapshot 1`] = `
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: hsl(238,40%,52%);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 500;
+  gap: .5rem;
+  height: 3rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1.1;
+  padding: 0;
+  -webkit-transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-in;
+}
+
+.c0:hover {
+  opacity: .4;
+}
+
+.c1 {
+  background: hsl(238,40%,52%);
+  border-radius: .5rem;
+  color: hsl( 0,0%,100%);
+  font-size: 1.125rem;
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+  width: 8.75rem;
+}
+
+<div>
+  <button
+    class="c0 c1"
+    color="primary"
+    type="button"
+  >
+    Test
+  </button>
+</div>
+`;

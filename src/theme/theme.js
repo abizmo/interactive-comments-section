@@ -1,11 +1,11 @@
 const theme = {
   colors: {
-    'primary-blue-500': 'hsl(238, 40%, 52%)',
-    'primary-blue-200': 'hsl(239, 57%, 85%)',
-    'primary-red-500': 'hsl(358, 79%, 66%)',
-    'primary-red-200': 'hsl(357, 100%, 86%)',
+    'primary-500': 'hsl(238, 40%, 52%)',
+    'primary-200': 'hsl(239, 57%, 85%)',
+    'secondary-500': 'hsl(358, 79%, 66%)',
+    'secondary-200': 'hsl(357, 100%, 86%)',
     'neutral-800': 'hsl( 212, 24%, 26%)',
-    'neutral-600': 'hsl( 211, 10%, 45%)',
+    'neutral-500': 'hsl( 211, 10%, 45%)',
     'neutral-300': 'hsl( 223, 19%, 93%)',
     'neutral-200': 'hsl( 228, 33%, 97%)',
     'neutral-100': 'hsl( 0, 0%, 100%)',

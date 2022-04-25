@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle(({ theme }) => ({
   },
   body: {
     background: theme.colors['neutral-200'],
-    color: theme.colors['neutral-600'],
+    color: theme.colors['neutral-500'],
     fontFamily: theme.fontFamilies.sans,
     fontSize: theme.fontSizes[500],
     lineHeight: 1.5,
