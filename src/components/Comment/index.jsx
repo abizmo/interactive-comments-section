@@ -19,6 +19,15 @@ const Wrapper = styled.article`
   grid-template-columns: repeat(2, 1fr);
   padding: 1rem;
 
+  @media(${({ theme }) => theme.mediaQueries.lg}) {
+    column-gap: 1.5rem;
+    grid-template-areas:
+      'votes header buttons'
+      'votes info info';
+    grid-template-columns: min-content repeat(2, 1fr);
+    padding: 1.5rem;
+  }
+
   & > header {
     align-items: center;
     grid-area: header;
