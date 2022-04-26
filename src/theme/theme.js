@@ -20,6 +20,9 @@ const theme = {
     300: '.75rem',
     100: '.6875rem',
   },
+  mediaQueries: {
+    lg: 'min-width: 41.125rem',
+  },
 };
 
 export default theme;

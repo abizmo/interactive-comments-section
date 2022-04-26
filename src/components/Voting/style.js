@@ -15,6 +15,13 @@ export const Wrapper = styled.div`
     text-align: center;
     width: 3ch;
   }
+
+  @media(${({ theme }) => theme.mediaQueries.lg}) {
+    aspect-ratio: .5;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem .5rem;
+  }
 `;
 
 export const Button = styled.button`
@@ -24,9 +31,10 @@ export const Button = styled.button`
   cursor: pointer;
   display: grid;
   line-height: 1.1;
-  padding-inline: .5rem;
+  padding: 0;
   place-items: center;
   transition: opacity 300ms ease-in-out;
+  width: 16px;
 
   &:hover:enabled path {
     fill: ${({ theme }) => theme.colors['primary-500']};
