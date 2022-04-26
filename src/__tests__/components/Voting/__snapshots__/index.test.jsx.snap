@@ -3,10 +3,11 @@
 exports[`renders and MatchSnapshot 1`] = `
 <div>
   <div
-    class="sc-bczRLJ ecDJzl"
+    class="sc-bczRLJ huRghr"
     role="widget"
   >
     <button
+      class="sc-gsnTZi jjXnFX"
       type="button"
     >
       <svg>
@@ -22,6 +23,7 @@ exports[`renders and MatchSnapshot 1`] = `
       0005
     </p>
     <button
+      class="sc-gsnTZi jjXnFX"
       type="button"
     >
       <svg>
