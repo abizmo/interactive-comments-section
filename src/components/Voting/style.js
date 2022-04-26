@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
     color: ${({ theme }) => theme.colors['primary-500']};
     font-weight: 500;
     text-align: center;
-    width: 4ch;
+    width: 3ch;
   }
 `;
 

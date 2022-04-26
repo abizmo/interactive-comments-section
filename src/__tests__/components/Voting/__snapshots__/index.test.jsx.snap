@@ -3,7 +3,7 @@
 exports[`renders and MatchSnapshot 1`] = `
 <div>
   <div
-    class="sc-bczRLJ huRghr"
+    class="sc-bczRLJ NksmQ"
     role="widget"
   >
     <button
@@ -20,7 +20,7 @@ exports[`renders and MatchSnapshot 1`] = `
       </span>
     </button>
     <p>
-      0005
+      5
     </p>
     <button
       class="sc-gsnTZi jjXnFX"
