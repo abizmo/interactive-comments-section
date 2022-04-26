@@ -7,24 +7,25 @@ import Theme from '../../../theme';
 
 test('renders default button and match snapshot', () => {
   const handleClick = jest.fn();
-  const { container, getByText } = render(
+  const { container } = render(
     <Theme>
       <Button label="Test" onClick={handleClick} />
     </Theme>,
   );
 
-  const result = getByText(/Test/);
   expect(container).toMatchSnapshot();
+
+  const result = screen.getByText(/Test/);
   expect(result).toHaveStyle('background: transparent');
   expect(result).toHaveStyle('color: hsl( 211, 10%, 45%)');
   expect(result.getAttribute('color')).toEqual('neutral');
 
-  fireEvent.click(screen.getByText(/Test/));
+  fireEvent.click(result);
   expect(handleClick).toHaveBeenCalled();
 });
 
 test('renders primary contained button and match snapshot', () => {
-  const { container, getByText } = render(
+  const { container } = render(
     <Theme>
       <Button
         color="primary"
@@ -36,8 +37,9 @@ test('renders primary contained button and match snapshot', () => {
     </Theme>,
   );
 
-  const result = getByText(/Test/);
   expect(container).toMatchSnapshot();
+
+  const result = screen.getByText(/Test/);
   expect(result).toHaveStyle('background: hsl(238, 40%, 52%)');
   expect(result).toHaveStyle('color: hsl( 0, 0%, 100%)');
   expect(result).toHaveStyle('width: 8.75rem');

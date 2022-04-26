@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders and MatchSnapshot 1`] = `
+<div>
+  <div
+    class="sc-bczRLJ huRghr"
+    role="widget"
+  >
+    <button
+      class="sc-gsnTZi jjXnFX"
+      type="button"
+    >
+      <svg>
+        plus.svg
+      </svg>
+      <span
+        class="sr-only"
+      >
+        Plus
+      </span>
+    </button>
+    <p>
+      0005
+    </p>
+    <button
+      class="sc-gsnTZi jjXnFX"
+      type="button"
+    >
+      <svg>
+        minus.svg
+      </svg>
+      <span
+        class="sr-only"
+      >
+        Minus
+      </span>
+    </button>
+  </div>
+</div>
+`;
