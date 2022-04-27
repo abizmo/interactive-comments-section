@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
 import { fireEvent, render, screen } from '@testing-library/react';
 
 import Voting from '../../../components/Voting';
