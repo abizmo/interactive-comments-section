@@ -3,7 +3,7 @@
 exports[`renders Interactive comments section 1`] = `
 <div>
   <article
-    class="sc-eCYdqJ ddZxdj"
+    class="sc-eCYdqJ eopLEu"
   >
     <header>
       <picture
@@ -24,6 +24,11 @@ exports[`renders Interactive comments section 1`] = `
       >
         amyrobson
       </span>
+      <span
+        class="sc-gKXOVf kHYIod"
+      >
+        you
+      </span>
       <span>
         1 month ago
       </span>
@@ -35,7 +40,7 @@ exports[`renders Interactive comments section 1`] = `
       id="votes"
     >
       <div
-        class="sc-dkzDqf nvemP"
+        class="sc-dkzDqf fIRSEx"
         role="widget"
       >
         <button
@@ -74,14 +79,24 @@ exports[`renders Interactive comments section 1`] = `
       id="buttons"
     >
       <button
+        class="sc-bczRLJ bDIsdp"
+        color="secondary"
+        type="button"
+      >
+        <svg>
+          delete.svg
+        </svg>
+        Delete
+      </button>
+      <button
         class="sc-bczRLJ gbCjDT"
         color="primary"
         type="button"
       >
         <svg>
-          reply.svg
+          edit.svg
         </svg>
-        Reply
+        Edit
       </button>
     </div>
   </article>

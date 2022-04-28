@@ -21,7 +21,7 @@ const theme = {
     100: '.6875rem',
   },
   mediaQueries: {
-    lg: 'min-width: 41.125rem',
+    lg: 'min-width: 38rem',
   },
 };
 

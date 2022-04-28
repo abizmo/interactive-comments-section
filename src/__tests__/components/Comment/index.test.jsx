@@ -7,9 +7,9 @@ import Theme from '../../../theme';
 
 const comment = {
   id: 1,
-  user: 'amyrobson',
+  author: 'amyrobson',
   date: '1 month ago',
-  body: 'Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You’ve nailed the design and the responsiveness at various breakpoints works really well.',
+  body: 'Impressive!',
   votes: 0,
 };
 
@@ -17,7 +17,7 @@ test('renders and MatchSnapshot', () => {
   const { container } = render(
     <Theme>
       <Comment
-        user={comment.user}
+        author={comment.author}
         date={comment.date}
         body={comment.body}
         likes={comment.votes}
@@ -25,14 +25,33 @@ test('renders and MatchSnapshot', () => {
     </Theme>,
   );
 
-  // expect(screen.getByText('5')).toBeTruthy();
-  // expect(screen.getByRole('widget')).toHaveStyle('background: hsl( 228, 33%, 97%)');
-
-  // fireEvent.click(screen.getByText('Plus'));
-  // expect(handleVote).toHaveBeenCalled();
-
-  // fireEvent.click(screen.getByText('Minus'));
-  // expect(handleVote).toHaveBeenCalled();
+  expect(screen.getByText(comment.author)).toBeTruthy();
+  expect(screen.getByText(comment.body)).toBeTruthy();
+  expect(screen.queryByText('Delete')).toBeFalsy();
+  expect(screen.queryByText('Edit')).toBeFalsy();
+  expect(screen.queryByText('Reply')).toBeTruthy();
+  expect(screen.queryByText('you')).toBeFalsy();
 
   expect(container).toMatchSnapshot();
+});
+
+test("renders user's comment", () => {
+  render(
+    <Theme>
+      <Comment
+        author={comment.author}
+        date={comment.date}
+        body={comment.body}
+        likes={comment.votes}
+        you
+      />
+    </Theme>,
+  );
+
+  expect(screen.getByText(comment.author)).toBeTruthy();
+  expect(screen.getByText(comment.body)).toBeTruthy();
+  expect(screen.queryByText('Delete')).toBeTruthy();
+  expect(screen.queryByText('Edit')).toBeTruthy();
+  expect(screen.queryByText('Reply')).toBeFalsy();
+  expect(screen.queryByText('you')).toBeTruthy();
 });

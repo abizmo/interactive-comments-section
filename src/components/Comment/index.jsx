@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+import { ReactComponent as Delete } from '../../assets/icons/delete.svg';
+import { ReactComponent as Edit } from '../../assets/icons/edit.svg';
 import { ReactComponent as Reply } from '../../assets/icons/reply.svg';
 import Avatar from '../Avatar';
 import Button from '../Button';
@@ -26,7 +28,7 @@ const Wrapper = styled.article`
     grid-template-areas:
       'votes header buttons'
       'votes info info';
-    grid-template-columns: min-content repeat(2, 1fr);
+    grid-template-columns: min-content 3fr 1fr;
     padding: 1.5rem;
   }
 
@@ -50,6 +52,8 @@ const Wrapper = styled.article`
     align-self: center;
     grid-area: buttons;
     justify-self: end;
+    display: flex;
+    gap: 1rem;
   }
 `;
 
@@ -59,16 +63,30 @@ const Nickname = styled.span`
   text-transform: lowercase;
 `;
 
+const Label = styled.span`
+  background: ${({ theme }) => theme.colors['primary-500']};
+  border-radius: .25rem;
+  color: ${({ theme }) => theme.colors['neutral-100']};
+  font-size: ${({ theme }) => theme.fontSizes[300]};
+  font-weight: 500;
+  line-height: 1.1;
+  padding: .2rem .5rem;
+  text-align: center;
+`;
+
 function Comment({
-  user, date, body, likes,
+  author, date, body, likes, you,
 }) {
   const [votes, setVotes] = useState(likes);
 
   return (
     <Wrapper>
       <header>
-        <Avatar user={user} />
-        <Nickname>{user}</Nickname>
+        <Avatar user={author} />
+        <Nickname>{author}</Nickname>
+        { you && (
+          <Label>you</Label>
+        )}
         <span>{date}</span>
       </header>
       <p>{body}</p>
@@ -76,26 +94,47 @@ function Comment({
         <Voting onVote={setVotes} votes={votes} />
       </div>
       <div id="buttons">
-        <Button
-          color="primary"
-          icon={Reply}
-          label="Reply"
-          onClick={doNothing}
-        />
+        {
+          you ? (
+            <>
+              <Button
+                color="secondary"
+                icon={Delete}
+                label="Delete"
+                onClick={doNothing}
+              />
+              <Button
+                color="primary"
+                icon={Edit}
+                label="Edit"
+                onClick={doNothing}
+              />
+            </>
+          ) : (
+            <Button
+              color="primary"
+              icon={Reply}
+              label="Reply"
+              onClick={doNothing}
+            />
+          )
+        }
       </div>
     </Wrapper>
   );
 }
 
 Comment.propTypes = {
-  user: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   likes: PropTypes.number,
+  you: PropTypes.bool,
 };
 
 Comment.defaultProps = {
   likes: 0,
+  you: false,
 };
 
 export default Comment;

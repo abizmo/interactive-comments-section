@@ -3,7 +3,7 @@
 exports[`renders and MatchSnapshot 1`] = `
 <div>
   <article
-    class="sc-eCYdqJ ddZxdj"
+    class="sc-eCYdqJ eopLEu"
   >
     <header>
       <picture
@@ -29,13 +29,13 @@ exports[`renders and MatchSnapshot 1`] = `
       </span>
     </header>
     <p>
-      Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You’ve nailed the design and the responsiveness at various breakpoints works really well.
+      Impressive!
     </p>
     <div
       id="votes"
     >
       <div
-        class="sc-dkzDqf nvemP"
+        class="sc-dkzDqf fIRSEx"
         role="widget"
       >
         <button
