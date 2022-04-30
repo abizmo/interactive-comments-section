@@ -13,7 +13,7 @@ const comment = {
   votes: 0,
 };
 
-test('renders and MatchSnapshot', () => {
+test('renders a comment and MatchSnapshot', () => {
   const { container } = render(
     <Theme>
       <Comment
@@ -28,14 +28,13 @@ test('renders and MatchSnapshot', () => {
   expect(screen.getByText(comment.author)).toBeTruthy();
   expect(screen.getByText(comment.body)).toBeTruthy();
   expect(screen.queryByText('Delete')).toBeFalsy();
-  expect(screen.queryByText('Edit')).toBeFalsy();
   expect(screen.queryByText('Reply')).toBeTruthy();
   expect(screen.queryByText('you')).toBeFalsy();
 
   expect(container).toMatchSnapshot();
 });
 
-test("renders user's comment", () => {
+test("renders a current user's comment", () => {
   render(
     <Theme>
       <Comment
@@ -48,8 +47,6 @@ test("renders user's comment", () => {
     </Theme>,
   );
 
-  expect(screen.getByText(comment.author)).toBeTruthy();
-  expect(screen.getByText(comment.body)).toBeTruthy();
   expect(screen.queryByText('Delete')).toBeTruthy();
   expect(screen.queryByText('Edit')).toBeTruthy();
   expect(screen.queryByText('Reply')).toBeFalsy();

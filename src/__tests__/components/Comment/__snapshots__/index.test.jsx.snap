@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders and MatchSnapshot 1`] = `
+exports[`renders a comment and MatchSnapshot 1`] = `
 <div>
   <article
     class="sc-eCYdqJ eopLEu"
