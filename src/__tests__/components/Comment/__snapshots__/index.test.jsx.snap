@@ -20,12 +20,12 @@ exports[`Comment from current user should render a comment 1`] = `
         />
       </picture>
       <span
-        class="sc-jSMfEi eWFTtt"
+        class="sc-gKXOVf cAhEkI"
       >
         amyrobson
       </span>
       <span
-        class="sc-gKXOVf kHYIod"
+        class="sc-iBkjds iXTMIL"
       >
         you
       </span>
@@ -123,7 +123,7 @@ exports[`Comment from other user should render a comment 1`] = `
         />
       </picture>
       <span
-        class="sc-jSMfEi eWFTtt"
+        class="sc-gKXOVf cAhEkI"
       >
         amyrobson
       </span>

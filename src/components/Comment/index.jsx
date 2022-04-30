@@ -7,10 +7,12 @@ import { ReactComponent as Reply } from '../../assets/icons/reply.svg';
 import Avatar from '../Avatar';
 import Button from '../Button';
 import Voting from '../Voting';
-import { Label, Nickname, Wrapper } from './style';
+import {
+  At, Label, Nickname, Wrapper,
+} from './style';
 
 function Comment({
-  author, date, body, likes, onDelete, onEdit, onReply, you,
+  author, date, body, likes, onDelete, onEdit, onReply, replyingTo, you,
 }) {
   const [votes, setVotes] = useState(likes);
 
@@ -24,7 +26,16 @@ function Comment({
         )}
         <span>{date}</span>
       </header>
-      <p>{body}</p>
+      <p>
+        { replyingTo && (
+          <At>
+            @
+            {replyingTo}
+            {' '}
+          </At>
+        )}
+        {body}
+      </p>
       <div id="votes">
         <Voting onVote={setVotes} votes={votes} />
       </div>
@@ -64,17 +75,16 @@ Comment.propTypes = {
   body: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   likes: PropTypes.number,
-  onDelete: PropTypes.func,
-  onEdit: PropTypes.func,
-  onReply: PropTypes.func,
+  onDelete: PropTypes.func.isRequired,
+  onEdit: PropTypes.func.isRequired,
+  onReply: PropTypes.func.isRequired,
+  replyingTo: PropTypes.string,
   you: PropTypes.bool,
 };
 
 Comment.defaultProps = {
   likes: 0,
-  onDelete: null,
-  onEdit: null,
-  onReply: null,
+  replyingTo: null,
   you: false,
 };
 
