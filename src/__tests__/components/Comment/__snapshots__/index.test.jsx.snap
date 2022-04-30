@@ -1,6 +1,109 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders a comment and MatchSnapshot 1`] = `
+exports[`Comment from current user should render a comment 1`] = `
+<div>
+  <article
+    class="sc-eCYdqJ eopLEu"
+  >
+    <header>
+      <picture
+        style="width: 2rem;"
+      >
+        <source
+          srcset="/avatars/amyrobson.webp"
+          type="image/webp"
+        />
+        <img
+          alt="amyrobson"
+          src="/avatars/amyrobson.png"
+          style="width: 100%;"
+        />
+      </picture>
+      <span
+        class="sc-jSMfEi eWFTtt"
+      >
+        amyrobson
+      </span>
+      <span
+        class="sc-gKXOVf kHYIod"
+      >
+        you
+      </span>
+      <span>
+        1 month ago
+      </span>
+    </header>
+    <p>
+      Impressive!
+    </p>
+    <div
+      id="votes"
+    >
+      <div
+        class="sc-dkzDqf fIRSEx"
+        role="widget"
+      >
+        <button
+          class="sc-hKMtZM dbWWXw"
+          type="button"
+        >
+          <svg>
+            plus.svg
+          </svg>
+          <span
+            class="sr-only"
+          >
+            Plus
+          </span>
+        </button>
+        <p>
+          0
+        </p>
+        <button
+          class="sc-hKMtZM dbWWXw"
+          disabled=""
+          type="button"
+        >
+          <svg>
+            minus.svg
+          </svg>
+          <span
+            class="sr-only"
+          >
+            Minus
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      id="buttons"
+    >
+      <button
+        class="sc-bczRLJ bDIsdp"
+        color="secondary"
+        type="button"
+      >
+        <svg>
+          delete.svg
+        </svg>
+        Delete
+      </button>
+      <button
+        class="sc-bczRLJ gbCjDT"
+        color="primary"
+        type="button"
+      >
+        <svg>
+          edit.svg
+        </svg>
+        Edit
+      </button>
+    </div>
+  </article>
+</div>
+`;
+
+exports[`Comment from other user should render a comment 1`] = `
 <div>
   <article
     class="sc-eCYdqJ eopLEu"

@@ -13,42 +13,88 @@ const comment = {
   votes: 0,
 };
 
-test('renders a comment and MatchSnapshot', () => {
-  const { container } = render(
-    <Theme>
-      <Comment
-        author={comment.author}
-        date={comment.date}
-        body={comment.body}
-        likes={comment.votes}
-      />
-    </Theme>,
-  );
+describe('Comment from other user', () => {
+  let handleReply;
+  let rendered;
 
-  expect(screen.getByText(comment.author)).toBeTruthy();
-  expect(screen.getByText(comment.body)).toBeTruthy();
-  expect(screen.queryByText('Delete')).toBeFalsy();
-  expect(screen.queryByText('Reply')).toBeTruthy();
-  expect(screen.queryByText('you')).toBeFalsy();
+  beforeEach(() => {
+    handleReply = jest.fn();
+    rendered = render(
+      <Theme>
+        <Comment
+          author={comment.author}
+          date={comment.date}
+          body={comment.body}
+          likes={comment.votes}
+          onReply={handleReply}
+        />
+      </Theme>,
+    );
+  });
 
-  expect(container).toMatchSnapshot();
+  test('should render a comment', () => {
+    const { container } = rendered;
+
+    expect(screen.getByText(comment.author)).toBeTruthy();
+    expect(screen.getByText(comment.body)).toBeTruthy();
+
+    expect(screen.queryByText('Delete')).toBeFalsy();
+    expect(screen.queryByText('you')).toBeFalsy();
+
+    expect(container).toMatchSnapshot();
+  });
+
+  test('click reply button', () => {
+    const button = screen.getByText('Reply');
+
+    fireEvent.click(button);
+    expect(handleReply).toHaveBeenCalled();
+  });
 });
 
-test("renders a current user's comment", () => {
-  render(
-    <Theme>
-      <Comment
-        author={comment.author}
-        date={comment.date}
-        body={comment.body}
-        likes={comment.votes}
-        you
-      />
-    </Theme>,
-  );
+describe('Comment from current user', () => {
+  let handleEdit;
+  let handleDelete;
+  let rendered;
 
-  expect(screen.queryByText('Delete')).toBeTruthy();
-  expect(screen.queryByText('Edit')).toBeTruthy();
-  expect(screen.queryByText('Reply')).toBeFalsy();
-  expect(screen.queryByText('you')).toBeTruthy();
+  beforeEach(() => {
+    handleEdit = jest.fn();
+    handleDelete = jest.fn();
+    rendered = render(
+      <Theme>
+        <Comment
+          author={comment.author}
+          date={comment.date}
+          body={comment.body}
+          likes={comment.votes}
+          onEdit={handleEdit}
+          onDelete={handleDelete}
+          you
+        />
+      </Theme>,
+    );
+  });
+
+  test('should render a comment', () => {
+    const { container } = rendered;
+
+    expect(screen.queryByText('Reply')).toBeFalsy();
+    expect(screen.queryByText('you')).toBeTruthy();
+
+    expect(container).toMatchSnapshot();
+  });
+
+  test('click delete button', () => {
+    const button = screen.getByText('Delete');
+
+    fireEvent.click(button);
+    expect(handleDelete).toHaveBeenCalled();
+  });
+
+  test('click edit button', () => {
+    const button = screen.getByText('Edit');
+
+    fireEvent.click(button);
+    expect(handleEdit).toHaveBeenCalled();
+  });
 });

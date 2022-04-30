@@ -9,8 +9,6 @@ import Avatar from '../Avatar';
 import Button from '../Button';
 import Voting from '../Voting';
 
-function doNothing() {}
-
 const Wrapper = styled.article`
   background: ${({ theme }) => theme.colors['neutral-100']};
   border-radius: .5rem;
@@ -75,7 +73,7 @@ const Label = styled.span`
 `;
 
 function Comment({
-  author, date, body, likes, you,
+  author, date, body, likes, onDelete, onEdit, onReply, you,
 }) {
   const [votes, setVotes] = useState(likes);
 
@@ -101,13 +99,13 @@ function Comment({
                 color="secondary"
                 icon={Delete}
                 label="Delete"
-                onClick={doNothing}
+                onClick={onDelete}
               />
               <Button
                 color="primary"
                 icon={Edit}
                 label="Edit"
-                onClick={doNothing}
+                onClick={onEdit}
               />
             </>
           ) : (
@@ -115,7 +113,7 @@ function Comment({
               color="primary"
               icon={Reply}
               label="Reply"
-              onClick={doNothing}
+              onClick={onReply}
             />
           )
         }
@@ -126,14 +124,20 @@ function Comment({
 
 Comment.propTypes = {
   author: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
   likes: PropTypes.number,
+  onDelete: PropTypes.func,
+  onEdit: PropTypes.func,
+  onReply: PropTypes.func,
   you: PropTypes.bool,
 };
 
 Comment.defaultProps = {
   likes: 0,
+  onDelete: null,
+  onEdit: null,
+  onReply: null,
   you: false,
 };
 
