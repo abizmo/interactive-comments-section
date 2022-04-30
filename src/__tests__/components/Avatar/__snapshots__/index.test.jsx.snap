@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render 1`] = `
+<div>
+  <picture
+    style="width: 2rem;"
+  >
+    <source
+      srcset="/avatars/amyrobson.webp"
+      type="image/webp"
+    />
+    <img
+      alt="amyrobson"
+      src="/avatars/amyrobson.png"
+      style="width: 100%;"
+    />
+  </picture>
+</div>
+`;

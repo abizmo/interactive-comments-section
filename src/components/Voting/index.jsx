@@ -5,12 +5,6 @@ import { ReactComponent as Minus } from '../../assets/icons/minus.svg';
 import { ReactComponent as Plus } from '../../assets/icons/plus.svg';
 import { Button, Wrapper } from './style';
 
-function format(number) {
-  if (number < 10) return `000${number}`;
-  if (number < 100) return `00${number}`;
-  if (number < 1000) return `0${number}`;
-  return number;
-}
 function Voting({ onVote, votes }) {
   return (
     // eslint-disable-next-line jsx-a11y/aria-role
@@ -19,7 +13,7 @@ function Voting({ onVote, votes }) {
         <Plus />
         <span className="sr-only">Plus</span>
       </Button>
-      <p>{format(votes)}</p>
+      <p>{votes}</p>
       <Button disabled={votes === 0} onClick={() => onVote((prv) => prv - 1)} type="button">
         <Minus />
         <span className="sr-only">Minus</span>

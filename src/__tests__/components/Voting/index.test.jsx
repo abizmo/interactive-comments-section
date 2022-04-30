@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
 import { fireEvent, render, screen } from '@testing-library/react';
 
 import Voting from '../../../components/Voting';
@@ -14,7 +13,7 @@ test('renders and MatchSnapshot', () => {
     </Theme>,
   );
 
-  expect(screen.getByText('0005')).toBeTruthy();
+  expect(screen.getByText('5')).toBeTruthy();
   expect(screen.getByRole('widget')).toHaveStyle('background: hsl( 228, 33%, 97%)');
 
   fireEvent.click(screen.getByText('Plus'));
