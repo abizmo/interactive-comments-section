@@ -46,6 +46,11 @@ export const Wrapper = styled.article`
   }
 `;
 
+export const At = styled.span`
+  color: ${({ theme }) => theme.colors['primary-500']};
+  font-weight: 500;
+`;
+
 export const Nickname = styled.span`
   color: ${({ theme }) => theme.colors['neutral-800']};
   font-weight: 500;

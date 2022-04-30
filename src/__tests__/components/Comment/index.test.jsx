@@ -1,6 +1,7 @@
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
-import { fireEvent, render, screen } from '@testing-library/react';
+import {
+  fireEvent, render, screen, cleanup,
+} from '@testing-library/react';
 
 import Comment from '../../../components/Comment';
 import Theme from '../../../theme';
@@ -11,14 +12,22 @@ const comment = {
   date: '1 month ago',
   body: 'Impressive!',
   votes: 0,
+  replyingTo: 'maxblagun',
 };
 
+afterEach(cleanup);
+
 describe('Comment from other user', () => {
+  let handleDelete;
+  let handleEdit;
   let handleReply;
   let rendered;
 
   beforeEach(() => {
+    handleDelete = jest.fn();
+    handleEdit = jest.fn();
     handleReply = jest.fn();
+
     rendered = render(
       <Theme>
         <Comment
@@ -26,6 +35,8 @@ describe('Comment from other user', () => {
           date={comment.date}
           body={comment.body}
           likes={comment.votes}
+          onDelete={handleDelete}
+          onEdit={handleEdit}
           onReply={handleReply}
         />
       </Theme>,
@@ -40,6 +51,7 @@ describe('Comment from other user', () => {
 
     expect(screen.queryByText('Delete')).toBeFalsy();
     expect(screen.queryByText('you')).toBeFalsy();
+    expect(screen.queryByText('@')).toBeFalsy();
 
     expect(container).toMatchSnapshot();
   });
@@ -53,13 +65,16 @@ describe('Comment from other user', () => {
 });
 
 describe('Comment from current user', () => {
-  let handleEdit;
   let handleDelete;
+  let handleEdit;
+  let handleReply;
   let rendered;
 
   beforeEach(() => {
-    handleEdit = jest.fn();
     handleDelete = jest.fn();
+    handleEdit = jest.fn();
+    handleReply = jest.fn();
+
     rendered = render(
       <Theme>
         <Comment
@@ -67,8 +82,9 @@ describe('Comment from current user', () => {
           date={comment.date}
           body={comment.body}
           likes={comment.votes}
-          onEdit={handleEdit}
           onDelete={handleDelete}
+          onEdit={handleEdit}
+          onReply={handleReply}
           you
         />
       </Theme>,
@@ -96,5 +112,36 @@ describe('Comment from current user', () => {
 
     fireEvent.click(button);
     expect(handleEdit).toHaveBeenCalled();
+  });
+});
+
+describe('Replied to some user', () => {
+  let handleDelete;
+  let handleEdit;
+  let handleReply;
+
+  beforeEach(() => {
+    handleDelete = jest.fn();
+    handleEdit = jest.fn();
+    handleReply = jest.fn();
+
+    render(
+      <Theme>
+        <Comment
+          author={comment.author}
+          date={comment.date}
+          body={comment.body}
+          likes={comment.votes}
+          onDelete={handleDelete}
+          onEdit={handleEdit}
+          onReply={handleReply}
+          replyingTo={comment.replyingTo}
+        />
+      </Theme>,
+    );
+  });
+
+  test('should show the user who has been replied', () => {
+    expect(screen.getByText(`@${comment.replyingTo}`)).toHaveStyle('color: hsl(238,40%, 52%)');
   });
 });

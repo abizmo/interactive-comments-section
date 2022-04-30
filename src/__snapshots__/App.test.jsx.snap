@@ -2,103 +2,370 @@
 
 exports[`renders Interactive comments section 1`] = `
 <div>
-  <article
-    class="sc-eCYdqJ eopLEu"
+  <div
+    class="sc-ftvSup fcvmdl"
   >
-    <header>
-      <picture
-        style="width: 2rem;"
-      >
-        <source
-          srcset="/avatars/amyrobson.webp"
-          type="image/webp"
-        />
-        <img
-          alt="amyrobson"
-          src="/avatars/amyrobson.png"
-          style="width: 100%;"
-        />
-      </picture>
-      <span
-        class="sc-jSMfEi eWFTtt"
-      >
-        amyrobson
-      </span>
-      <span
-        class="sc-gKXOVf kHYIod"
-      >
-        you
-      </span>
-      <span>
-        1 month ago
-      </span>
-    </header>
-    <p>
-      Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You’ve nailed the design and the responsiveness at various breakpoints works really well.
-    </p>
-    <div
-      id="votes"
+    <article
+      class="sc-eCYdqJ eopLEu"
     >
+      <header>
+        <picture
+          style="width: 2rem;"
+        >
+          <source
+            srcset="/avatars/amyrobson.webp"
+            type="image/webp"
+          />
+          <img
+            alt="amyrobson"
+            src="/avatars/amyrobson.png"
+            style="width: 100%;"
+          />
+        </picture>
+        <span
+          class="sc-gKXOVf cAhEkI"
+        >
+          amyrobson
+        </span>
+        <span>
+          1 month ago
+        </span>
+      </header>
+      <p>
+        Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
+      </p>
       <div
-        class="sc-dkzDqf fIRSEx"
-        role="widget"
+        id="votes"
+      >
+        <div
+          class="sc-dkzDqf fIRSEx"
+          role="widget"
+        >
+          <button
+            class="sc-hKMtZM dbWWXw"
+            type="button"
+          >
+            <svg>
+              plus.svg
+            </svg>
+            <span
+              class="sr-only"
+            >
+              Plus
+            </span>
+          </button>
+          <p>
+            12
+          </p>
+          <button
+            class="sc-hKMtZM dbWWXw"
+            type="button"
+          >
+            <svg>
+              minus.svg
+            </svg>
+            <span
+              class="sr-only"
+            >
+              Minus
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        id="buttons"
       >
         <button
-          class="sc-hKMtZM dbWWXw"
+          class="sc-bczRLJ gbCjDT"
+          color="primary"
           type="button"
         >
           <svg>
-            plus.svg
+            reply.svg
           </svg>
-          <span
-            class="sr-only"
-          >
-            Plus
-          </span>
-        </button>
-        <p>
-          0
-        </p>
-        <button
-          class="sc-hKMtZM dbWWXw"
-          disabled=""
-          type="button"
-        >
-          <svg>
-            minus.svg
-          </svg>
-          <span
-            class="sr-only"
-          >
-            Minus
-          </span>
+          Reply
         </button>
       </div>
-    </div>
-    <div
-      id="buttons"
+    </article>
+    <article
+      class="sc-eCYdqJ eopLEu"
     >
-      <button
-        class="sc-bczRLJ bDIsdp"
-        color="secondary"
-        type="button"
+      <header>
+        <picture
+          style="width: 2rem;"
+        >
+          <source
+            srcset="/avatars/maxblagun.webp"
+            type="image/webp"
+          />
+          <img
+            alt="maxblagun"
+            src="/avatars/maxblagun.png"
+            style="width: 100%;"
+          />
+        </picture>
+        <span
+          class="sc-gKXOVf cAhEkI"
+        >
+          maxblagun
+        </span>
+        <span>
+          2 weeks ago
+        </span>
+      </header>
+      <p>
+        Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!
+      </p>
+      <div
+        id="votes"
       >
-        <svg>
-          delete.svg
-        </svg>
-        Delete
-      </button>
-      <button
-        class="sc-bczRLJ gbCjDT"
-        color="primary"
-        type="button"
+        <div
+          class="sc-dkzDqf fIRSEx"
+          role="widget"
+        >
+          <button
+            class="sc-hKMtZM dbWWXw"
+            type="button"
+          >
+            <svg>
+              plus.svg
+            </svg>
+            <span
+              class="sr-only"
+            >
+              Plus
+            </span>
+          </button>
+          <p>
+            5
+          </p>
+          <button
+            class="sc-hKMtZM dbWWXw"
+            type="button"
+          >
+            <svg>
+              minus.svg
+            </svg>
+            <span
+              class="sr-only"
+            >
+              Minus
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        id="buttons"
       >
-        <svg>
-          edit.svg
-        </svg>
-        Edit
-      </button>
+        <button
+          class="sc-bczRLJ gbCjDT"
+          color="primary"
+          type="button"
+        >
+          <svg>
+            reply.svg
+          </svg>
+          Reply
+        </button>
+      </div>
+    </article>
+    <div
+      class="sc-ftvSup sc-papXJ fcvmdl kvydfH"
+    >
+      <article
+        class="sc-eCYdqJ eopLEu"
+      >
+        <header>
+          <picture
+            style="width: 2rem;"
+          >
+            <source
+              srcset="/avatars/ramsesmiron.webp"
+              type="image/webp"
+            />
+            <img
+              alt="ramsesmiron"
+              src="/avatars/ramsesmiron.png"
+              style="width: 100%;"
+            />
+          </picture>
+          <span
+            class="sc-gKXOVf cAhEkI"
+          >
+            ramsesmiron
+          </span>
+          <span>
+            1 week ago
+          </span>
+        </header>
+        <p>
+          <span
+            class="sc-jSMfEi iqwptk"
+          >
+            @
+            maxblagun
+             
+          </span>
+          If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.
+        </p>
+        <div
+          id="votes"
+        >
+          <div
+            class="sc-dkzDqf fIRSEx"
+            role="widget"
+          >
+            <button
+              class="sc-hKMtZM dbWWXw"
+              type="button"
+            >
+              <svg>
+                plus.svg
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Plus
+              </span>
+            </button>
+            <p>
+              4
+            </p>
+            <button
+              class="sc-hKMtZM dbWWXw"
+              type="button"
+            >
+              <svg>
+                minus.svg
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Minus
+              </span>
+            </button>
+          </div>
+        </div>
+        <div
+          id="buttons"
+        >
+          <button
+            class="sc-bczRLJ gbCjDT"
+            color="primary"
+            type="button"
+          >
+            <svg>
+              reply.svg
+            </svg>
+            Reply
+          </button>
+        </div>
+      </article>
+      <article
+        class="sc-eCYdqJ eopLEu"
+      >
+        <header>
+          <picture
+            style="width: 2rem;"
+          >
+            <source
+              srcset="/avatars/juliusomo.webp"
+              type="image/webp"
+            />
+            <img
+              alt="juliusomo"
+              src="/avatars/juliusomo.png"
+              style="width: 100%;"
+            />
+          </picture>
+          <span
+            class="sc-gKXOVf cAhEkI"
+          >
+            juliusomo
+          </span>
+          <span
+            class="sc-iBkjds iXTMIL"
+          >
+            you
+          </span>
+          <span>
+            2 days ago
+          </span>
+        </header>
+        <p>
+          <span
+            class="sc-jSMfEi iqwptk"
+          >
+            @
+            ramsesmiron
+             
+          </span>
+          I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.
+        </p>
+        <div
+          id="votes"
+        >
+          <div
+            class="sc-dkzDqf fIRSEx"
+            role="widget"
+          >
+            <button
+              class="sc-hKMtZM dbWWXw"
+              type="button"
+            >
+              <svg>
+                plus.svg
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Plus
+              </span>
+            </button>
+            <p>
+              2
+            </p>
+            <button
+              class="sc-hKMtZM dbWWXw"
+              type="button"
+            >
+              <svg>
+                minus.svg
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Minus
+              </span>
+            </button>
+          </div>
+        </div>
+        <div
+          id="buttons"
+        >
+          <button
+            class="sc-bczRLJ bDIsdp"
+            color="secondary"
+            type="button"
+          >
+            <svg>
+              delete.svg
+            </svg>
+            Delete
+          </button>
+          <button
+            class="sc-bczRLJ gbCjDT"
+            color="primary"
+            type="button"
+          >
+            <svg>
+              edit.svg
+            </svg>
+            Edit
+          </button>
+        </div>
+      </article>
     </div>
-  </article>
+  </div>
 </div>
 `;
