@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Comment from '../components/Comment';
+import NewComment from '../components/NewComment';
 import data from '../data.json';
 
 const Wrapper = styled.div`
@@ -55,6 +56,7 @@ function Comments() {
           )}
         </React.Fragment>
       ))}
+      <NewComment user="amyrobson" />
     </Wrapper>
   );
 }

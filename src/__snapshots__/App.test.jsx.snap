@@ -3,7 +3,7 @@
 exports[`renders Interactive comments section 1`] = `
 <div>
   <div
-    class="sc-ftvSup fcvmdl"
+    class="sc-jqUVSM cARRwl"
   >
     <article
       class="sc-eCYdqJ eopLEu"
@@ -170,7 +170,7 @@ exports[`renders Interactive comments section 1`] = `
       </div>
     </article>
     <div
-      class="sc-ftvSup sc-papXJ fcvmdl kvydfH"
+      class="sc-jqUVSM sc-kDDrLX cARRwl cJWLJF"
     >
       <article
         class="sc-eCYdqJ eopLEu"
@@ -366,6 +366,37 @@ exports[`renders Interactive comments section 1`] = `
         </div>
       </article>
     </div>
+    <form
+      class="sc-ftvSup bhApFN"
+    >
+      <picture
+        style="width: 2rem;"
+      >
+        <source
+          srcset="/avatars/amyrobson.webp"
+          type="image/webp"
+        />
+        <img
+          alt="amyrobson"
+          src="/avatars/amyrobson.png"
+          style="width: 100%;"
+        />
+      </picture>
+      <textarea
+        aria-label="New comment"
+        class="sc-papXJ hmxrRz"
+        name="new-comment"
+        placeholder="Add comment..."
+        type="text"
+      />
+      <button
+        class="sc-bczRLJ sc-gsnTZi gbCjDT jNxzwF"
+        color="primary"
+        type="submit"
+      >
+        send
+      </button>
+    </form>
   </div>
 </div>
 `;
