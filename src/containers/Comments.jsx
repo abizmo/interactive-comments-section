@@ -28,7 +28,7 @@ function Comments() {
         <React.Fragment key={comment.id}>
           <Comment
             body={comment.content}
-            author={user.username}
+            user={user}
             date={comment.createdAt}
             likes={comment.score}
             onDelete={() => {}}
@@ -42,7 +42,7 @@ function Comments() {
                 <Comment
                   key={reply.id}
                   body={reply.content}
-                  author={reply.user.username}
+                  user={reply.user}
                   date={reply.createdAt}
                   likes={reply.score}
                   onDelete={() => {}}
@@ -56,7 +56,7 @@ function Comments() {
           )}
         </React.Fragment>
       ))}
-      <NewComment user={data.currentUser.username} />
+      <NewComment user={data.currentUser} />
     </Wrapper>
   );
 }

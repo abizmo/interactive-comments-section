@@ -8,11 +8,18 @@ import Theme from '../../../theme';
 
 const comment = {
   id: 1,
-  author: 'amyrobson',
-  date: '1 month ago',
-  body: 'Impressive!',
-  votes: 0,
+  content: "Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.",
+  createdAt: '1 month ago',
+  score: 12,
+  user: {
+    image: {
+      png: './images/avatars/image-amyrobson.png',
+      webp: './images/avatars/image-amyrobson.webp',
+    },
+    username: 'amyrobson',
+  },
   replyingTo: 'maxblagun',
+  replies: [],
 };
 
 afterEach(cleanup);
@@ -31,10 +38,10 @@ describe('Comment from other user', () => {
     rendered = render(
       <Theme>
         <Comment
-          author={comment.author}
-          date={comment.date}
-          body={comment.body}
-          likes={comment.votes}
+          user={comment.user}
+          date={comment.createdAt}
+          body={comment.content}
+          likes={comment.score}
           onDelete={handleDelete}
           onEdit={handleEdit}
           onReply={handleReply}
@@ -46,8 +53,8 @@ describe('Comment from other user', () => {
   test('should render a comment', () => {
     const { container } = rendered;
 
-    expect(screen.getByText(comment.author)).toBeTruthy();
-    expect(screen.getByText(comment.body)).toBeTruthy();
+    expect(screen.getByText(comment.user.username)).toBeTruthy();
+    expect(screen.getByText(comment.content)).toBeTruthy();
 
     expect(screen.queryByText('Delete')).toBeFalsy();
     expect(screen.queryByText('you')).toBeFalsy();
@@ -78,10 +85,10 @@ describe('Comment from current user', () => {
     rendered = render(
       <Theme>
         <Comment
-          author={comment.author}
-          date={comment.date}
-          body={comment.body}
-          likes={comment.votes}
+          user={comment.user}
+          date={comment.createdAt}
+          body={comment.content}
+          likes={comment.score}
           onDelete={handleDelete}
           onEdit={handleEdit}
           onReply={handleReply}
@@ -128,10 +135,10 @@ describe('Replied to some user', () => {
     render(
       <Theme>
         <Comment
-          author={comment.author}
-          date={comment.date}
-          body={comment.body}
-          likes={comment.votes}
+          user={comment.user}
+          date={comment.createdAt}
+          body={comment.content}
+          likes={comment.score}
           onDelete={handleDelete}
           onEdit={handleEdit}
           onReply={handleReply}

@@ -83,7 +83,10 @@ function NewComment({ user }) {
 }
 
 NewComment.propTypes = {
-  user: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    image: PropTypes.shape().isRequired,
+    username: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default NewComment;

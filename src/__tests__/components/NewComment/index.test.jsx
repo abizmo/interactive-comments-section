@@ -4,7 +4,13 @@ import React from 'react';
 import NewComment from '../../../components/NewComment';
 import Theme from '../../../theme';
 
-const user = 'maxblagun';
+const user = {
+  image: {
+    png: '../../../assets/images/avatars/image-juliusomo.png',
+    webp: '../../../assets/images/avatars/image-juliusomo.webp',
+  },
+  username: 'juliusomo',
+};
 
 describe('NewComment components', () => {
   test('should render', () => {
@@ -16,6 +22,6 @@ describe('NewComment components', () => {
 
     expect(screen.queryByLabelText(/comment/i)).toBeTruthy();
     expect(screen.queryByRole('button', { name: /send/i })).toBeTruthy();
-    expect(screen.queryByAltText(user)).toBeTruthy();
+    expect(screen.queryByAltText(user.username)).toBeTruthy();
   });
 });

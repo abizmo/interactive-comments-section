@@ -12,15 +12,15 @@ import {
 } from './style';
 
 function Comment({
-  author, date, body, likes, onDelete, onEdit, onReply, replyingTo, you,
+  date, body, likes, onDelete, onEdit, onReply, replyingTo, user, you,
 }) {
   const [votes, setVotes] = useState(likes);
 
   return (
     <Wrapper>
       <header>
-        <Avatar user={author} />
-        <Nickname>{author}</Nickname>
+        <Avatar user={user} />
+        <Nickname>{user.username}</Nickname>
         { you && (
           <Label>you</Label>
         )}
@@ -71,7 +71,6 @@ function Comment({
 }
 
 Comment.propTypes = {
-  author: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   likes: PropTypes.number,
@@ -79,6 +78,7 @@ Comment.propTypes = {
   onEdit: PropTypes.func.isRequired,
   onReply: PropTypes.func.isRequired,
   replyingTo: PropTypes.string,
+  user: PropTypes.shape().isRequired,
   you: PropTypes.bool,
 };
 
