@@ -10,12 +10,12 @@ exports[`Comment from current user should render a comment 1`] = `
         style="width: 2rem;"
       >
         <source
-          srcset="./images/avatars/image-amyrobson.webp"
+          srcset="/./images/avatars/image-amyrobson.webp"
           type="image/webp"
         />
         <img
           alt="amyrobson"
-          src="./images/avatars/image-amyrobson.png"
+          src="/./images/avatars/image-amyrobson.png"
           style="width: 100%;"
         />
       </picture>
@@ -112,12 +112,12 @@ exports[`Comment from other user should render a comment 1`] = `
         style="width: 2rem;"
       >
         <source
-          srcset="./images/avatars/image-amyrobson.webp"
+          srcset="/./images/avatars/image-amyrobson.webp"
           type="image/webp"
         />
         <img
           alt="amyrobson"
-          src="./images/avatars/image-amyrobson.png"
+          src="/./images/avatars/image-amyrobson.png"
           style="width: 100%;"
         />
       </picture>

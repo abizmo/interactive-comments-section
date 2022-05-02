@@ -6,12 +6,12 @@ exports[`should render 1`] = `
     style="width: 2rem;"
   >
     <source
-      srcset="../../../assets/images/avatars/image-juliusomo.webp"
+      srcset="/../../../assets/images/avatars/image-juliusomo.webp"
       type="image/webp"
     />
     <img
       alt="juliusomo"
-      src="../../../assets/images/avatars/image-juliusomo.png"
+      src="/../../../assets/images/avatars/image-juliusomo.png"
       style="width: 100%;"
     />
   </picture>

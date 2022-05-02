@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import Comment from '../components/Comment';
@@ -22,19 +22,29 @@ const WrapperReplies = styled(Wrapper)`
 `;
 
 function Comments() {
+  const [comments, setComments] = useState(null);
+  const [currentUser, setCurrentUser] = useState(null);
+
+  useEffect(() => {
+    setComments(data.comments);
+    setCurrentUser(data.currentUser);
+  }, []);
+
+  if (!comments) return <p>Loading...</p>;
+
   return (
     <Wrapper>
-      {data.comments.map(({ replies, user, ...comment }) => (
+      {comments.map(({ replies, user, ...comment }) => (
         <React.Fragment key={comment.id}>
           <Comment
             body={comment.content}
-            user={user}
             date={comment.createdAt}
             likes={comment.score}
             onDelete={() => {}}
             onEdit={() => {}}
             onReply={() => {}}
-            you={user.username === data.currentUser.username}
+            user={user}
+            you={user.username === currentUser.username}
           />
           { replies.length > 0 && (
             <WrapperReplies>
@@ -49,14 +59,14 @@ function Comments() {
                   onEdit={() => {}}
                   onReply={() => {}}
                   replyingTo={reply.replyingTo}
-                  you={reply.user.username === data.currentUser.username}
+                  you={reply.user.username === currentUser.username}
                 />
               ))}
             </WrapperReplies>
           )}
         </React.Fragment>
       ))}
-      <NewComment user={data.currentUser} />
+      <NewComment user={currentUser} />
     </Wrapper>
   );
 }
