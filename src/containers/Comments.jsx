@@ -37,9 +37,7 @@ function Comments() {
       {comments.map(({ replies, user, ...comment }) => (
         <React.Fragment key={comment.id}>
           <Comment
-            body={comment.content}
-            date={comment.createdAt}
-            likes={comment.score}
+            comment={comment}
             onDelete={() => {}}
             onEdit={() => {}}
             onReply={() => {}}
@@ -48,18 +46,16 @@ function Comments() {
           />
           { replies.length > 0 && (
             <WrapperReplies>
-              { replies.map((reply) => (
+              { replies.map(({ user: replier, replyingTo, ...reply }) => (
                 <Comment
                   key={reply.id}
-                  body={reply.content}
-                  user={reply.user}
-                  date={reply.createdAt}
-                  likes={reply.score}
+                  comment={reply}
                   onDelete={() => {}}
                   onEdit={() => {}}
                   onReply={() => {}}
-                  replyingTo={reply.replyingTo}
-                  you={reply.user.username === currentUser.username}
+                  replyingTo={replyingTo}
+                  user={replier}
+                  you={replier.username === currentUser.username}
                 />
               ))}
             </WrapperReplies>

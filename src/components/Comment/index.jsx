@@ -12,9 +12,9 @@ import {
 } from './style';
 
 function Comment({
-  date, body, likes, onDelete, onEdit, onReply, replyingTo, user, you,
+  comment, onDelete, onEdit, onReply, replyingTo, user, you,
 }) {
-  const [votes, setVotes] = useState(likes);
+  const [votes, setVotes] = useState(comment.score || 0);
 
   return (
     <Wrapper>
@@ -24,7 +24,7 @@ function Comment({
         { you && (
           <Label>you</Label>
         )}
-        <span>{date}</span>
+        <span>{comment.createdAt}</span>
       </header>
       <p>
         { replyingTo && (
@@ -34,7 +34,7 @@ function Comment({
             {' '}
           </At>
         )}
-        {body}
+        {comment.content}
       </p>
       <div id="votes">
         <Voting onVote={setVotes} votes={votes} />
@@ -71,19 +71,23 @@ function Comment({
 }
 
 Comment.propTypes = {
-  body: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  likes: PropTypes.number,
+  comment: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    content: PropTypes.string.isRequired,
+    createdAt: PropTypes.string.isRequired,
+    score: PropTypes.number,
+  }).isRequired,
   onDelete: PropTypes.func.isRequired,
   onEdit: PropTypes.func.isRequired,
   onReply: PropTypes.func.isRequired,
   replyingTo: PropTypes.string,
-  user: PropTypes.shape().isRequired,
+  user: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+  }).isRequired,
   you: PropTypes.bool,
 };
 
 Comment.defaultProps = {
-  likes: 0,
   replyingTo: null,
   you: false,
 };
