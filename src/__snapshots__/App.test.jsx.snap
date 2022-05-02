@@ -3,7 +3,7 @@
 exports[`renders Interactive comments section 1`] = `
 <div>
   <div
-    class="sc-ftvSup fcvmdl"
+    class="sc-jqUVSM cARRwl"
   >
     <article
       class="sc-eCYdqJ eopLEu"
@@ -13,12 +13,12 @@ exports[`renders Interactive comments section 1`] = `
           style="width: 2rem;"
         >
           <source
-            srcset="/avatars/amyrobson.webp"
+            srcset="/./images/avatars/image-amyrobson.webp"
             type="image/webp"
           />
           <img
             alt="amyrobson"
-            src="/avatars/amyrobson.png"
+            src="/./images/avatars/image-amyrobson.png"
             style="width: 100%;"
           />
         </picture>
@@ -95,12 +95,12 @@ exports[`renders Interactive comments section 1`] = `
           style="width: 2rem;"
         >
           <source
-            srcset="/avatars/maxblagun.webp"
+            srcset="/./images/avatars/image-maxblagun.webp"
             type="image/webp"
           />
           <img
             alt="maxblagun"
-            src="/avatars/maxblagun.png"
+            src="/./images/avatars/image-maxblagun.png"
             style="width: 100%;"
           />
         </picture>
@@ -170,7 +170,7 @@ exports[`renders Interactive comments section 1`] = `
       </div>
     </article>
     <div
-      class="sc-ftvSup sc-papXJ fcvmdl kvydfH"
+      class="sc-jqUVSM sc-kDDrLX cARRwl cJWLJF"
     >
       <article
         class="sc-eCYdqJ eopLEu"
@@ -180,12 +180,12 @@ exports[`renders Interactive comments section 1`] = `
             style="width: 2rem;"
           >
             <source
-              srcset="/avatars/ramsesmiron.webp"
+              srcset="/./images/avatars/image-ramsesmiron.webp"
               type="image/webp"
             />
             <img
               alt="ramsesmiron"
-              src="/avatars/ramsesmiron.png"
+              src="/./images/avatars/image-ramsesmiron.png"
               style="width: 100%;"
             />
           </picture>
@@ -269,12 +269,12 @@ exports[`renders Interactive comments section 1`] = `
             style="width: 2rem;"
           >
             <source
-              srcset="/avatars/juliusomo.webp"
+              srcset="/./images/avatars/image-juliusomo.webp"
               type="image/webp"
             />
             <img
               alt="juliusomo"
-              src="/avatars/juliusomo.png"
+              src="/./images/avatars/image-juliusomo.png"
               style="width: 100%;"
             />
           </picture>
@@ -366,6 +366,37 @@ exports[`renders Interactive comments section 1`] = `
         </div>
       </article>
     </div>
+    <form
+      class="sc-ftvSup bhApFN"
+    >
+      <picture
+        style="width: 2rem;"
+      >
+        <source
+          srcset="/./images/avatars/image-juliusomo.webp"
+          type="image/webp"
+        />
+        <img
+          alt="juliusomo"
+          src="/./images/avatars/image-juliusomo.png"
+          style="width: 100%;"
+        />
+      </picture>
+      <textarea
+        aria-label="New comment"
+        class="sc-papXJ hmxrRz"
+        name="new-comment"
+        placeholder="Add comment..."
+        type="text"
+      />
+      <button
+        class="sc-bczRLJ sc-gsnTZi gbCjDT jNxzwF"
+        color="primary"
+        type="submit"
+      >
+        send
+      </button>
+    </form>
   </div>
 </div>
 `;

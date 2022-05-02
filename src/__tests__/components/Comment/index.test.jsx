@@ -8,36 +8,43 @@ import Theme from '../../../theme';
 
 const comment = {
   id: 1,
-  author: 'amyrobson',
-  date: '1 month ago',
-  body: 'Impressive!',
-  votes: 0,
-  replyingTo: 'maxblagun',
+  content: "Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.",
+  createdAt: '1 month ago',
+  score: 12,
 };
 
+const user = {
+  image: {
+    png: './images/avatars/image-amyrobson.png',
+    webp: './images/avatars/image-amyrobson.webp',
+  },
+  username: 'amyrobson',
+};
+
+const replyingTo = 'maxblagun';
+
+let handleDelete;
+let handleEdit;
+let handleReply;
+let rendered;
+
+beforeEach(() => {
+  handleDelete = jest.fn();
+  handleEdit = jest.fn();
+  handleReply = jest.fn();
+});
 afterEach(cleanup);
 
 describe('Comment from other user', () => {
-  let handleDelete;
-  let handleEdit;
-  let handleReply;
-  let rendered;
-
   beforeEach(() => {
-    handleDelete = jest.fn();
-    handleEdit = jest.fn();
-    handleReply = jest.fn();
-
     rendered = render(
       <Theme>
         <Comment
-          author={comment.author}
-          date={comment.date}
-          body={comment.body}
-          likes={comment.votes}
+          comment={comment}
           onDelete={handleDelete}
           onEdit={handleEdit}
           onReply={handleReply}
+          user={user}
         />
       </Theme>,
     );
@@ -46,8 +53,8 @@ describe('Comment from other user', () => {
   test('should render a comment', () => {
     const { container } = rendered;
 
-    expect(screen.getByText(comment.author)).toBeTruthy();
-    expect(screen.getByText(comment.body)).toBeTruthy();
+    expect(screen.getByText(user.username)).toBeTruthy();
+    expect(screen.getByText(comment.content)).toBeTruthy();
 
     expect(screen.queryByText('Delete')).toBeFalsy();
     expect(screen.queryByText('you')).toBeFalsy();
@@ -65,26 +72,15 @@ describe('Comment from other user', () => {
 });
 
 describe('Comment from current user', () => {
-  let handleDelete;
-  let handleEdit;
-  let handleReply;
-  let rendered;
-
   beforeEach(() => {
-    handleDelete = jest.fn();
-    handleEdit = jest.fn();
-    handleReply = jest.fn();
-
     rendered = render(
       <Theme>
         <Comment
-          author={comment.author}
-          date={comment.date}
-          body={comment.body}
-          likes={comment.votes}
+          comment={comment}
           onDelete={handleDelete}
           onEdit={handleEdit}
           onReply={handleReply}
+          user={user}
           you
         />
       </Theme>,
@@ -116,32 +112,22 @@ describe('Comment from current user', () => {
 });
 
 describe('Replied to some user', () => {
-  let handleDelete;
-  let handleEdit;
-  let handleReply;
-
   beforeEach(() => {
-    handleDelete = jest.fn();
-    handleEdit = jest.fn();
-    handleReply = jest.fn();
-
     render(
       <Theme>
         <Comment
-          author={comment.author}
-          date={comment.date}
-          body={comment.body}
-          likes={comment.votes}
+          comment={comment}
           onDelete={handleDelete}
           onEdit={handleEdit}
           onReply={handleReply}
-          replyingTo={comment.replyingTo}
+          replyingTo={replyingTo}
+          user={user}
         />
       </Theme>,
     );
   });
 
   test('should show the user who has been replied', () => {
-    expect(screen.getByText(`@${comment.replyingTo}`)).toHaveStyle('color: hsl(238,40%, 52%)');
+    expect(screen.getByText(`@${replyingTo}`)).toHaveStyle('color: hsl(238,40%, 52%)');
   });
 });

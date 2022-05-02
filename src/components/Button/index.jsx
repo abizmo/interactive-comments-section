@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { Btn, BtnContained } from './styles';
 
 function Button({
-  color, icon: Icon, label, onClick, size, variant,
+  color, icon: Icon, label, onClick, size, type, variant,
 }) {
   let Component = Btn;
   if (variant === 'contained') {
     Component = BtnContained;
   }
   return (
-    <Component color={color} onClick={onClick} type="button" size={size}>
+    <Component color={color} onClick={onClick} type={type} size={size}>
       { Icon && (
         <Icon />
       )}
@@ -25,6 +25,7 @@ Button.propTypes = {
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   size: PropTypes.oneOf(['fit', 'small', 'big']),
+  type: PropTypes.oneOf(['button', 'submit']),
   variant: PropTypes.oneOf(['text', 'contained']),
 };
 
@@ -32,6 +33,7 @@ Button.defaultProps = {
   color: 'neutral',
   icon: null,
   size: 'fit',
+  type: 'button',
   variant: 'text',
 };
 
