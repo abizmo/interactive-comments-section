@@ -373,12 +373,12 @@ exports[`renders Interactive comments section 1`] = `
         style="width: 2rem;"
       >
         <source
-          srcset="/avatars/amyrobson.webp"
+          srcset="/avatars/juliusomo.webp"
           type="image/webp"
         />
         <img
-          alt="amyrobson"
-          src="/avatars/amyrobson.png"
+          alt="juliusomo"
+          src="/avatars/juliusomo.png"
           style="width: 100%;"
         />
       </picture>

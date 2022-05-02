@@ -56,7 +56,7 @@ function Comments() {
           )}
         </React.Fragment>
       ))}
-      <NewComment user="amyrobson" />
+      <NewComment user={data.currentUser.username} />
     </Wrapper>
   );
 }
