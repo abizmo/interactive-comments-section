@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 import Comment from '../components/Comment';
 import NewComment from '../components/NewComment';
+import { useComments } from '../context/comments';
+import { setComments } from '../context/commentsActions';
 import data from '../data.json';
 
 const Wrapper = styled.div`
@@ -22,12 +24,10 @@ const WrapperReplies = styled(Wrapper)`
 `;
 
 function Comments() {
-  const [comments, setComments] = useState(null);
-  const [currentUser, setCurrentUser] = useState(null);
+  const { state: { comments, currentUser }, dispatch } = useComments();
 
   useEffect(() => {
-    setComments(data.comments);
-    setCurrentUser(data.currentUser);
+    dispatch(setComments(data));
   }, []);
 
   if (!comments) return <p>Loading...</p>;
