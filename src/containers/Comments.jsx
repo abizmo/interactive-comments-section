@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Comment from '../components/Comment';
 import NewComment from '../components/NewComment';
 import { useComments } from '../context/comments';
-import { setComments } from '../context/commentsActions';
+import { deleteComment, deleteReply, setComments } from '../context/commentsActions';
 import data from '../data.json';
 
 const Wrapper = styled.div`
@@ -38,7 +38,7 @@ function Comments() {
         <React.Fragment key={comment.id}>
           <Comment
             comment={comment}
-            onDelete={() => {}}
+            onDelete={() => dispatch(deleteComment(comment.id))}
             onEdit={() => {}}
             onReply={() => {}}
             user={user}
@@ -50,7 +50,7 @@ function Comments() {
                 <Comment
                   key={reply.id}
                   comment={reply}
-                  onDelete={() => {}}
+                  onDelete={() => dispatch(deleteReply(comment.id, reply.id))}
                   onEdit={() => {}}
                   onReply={() => {}}
                   replyingTo={replyingTo}
