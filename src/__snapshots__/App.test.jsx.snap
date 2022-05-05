@@ -3,10 +3,10 @@
 exports[`renders Interactive comments section 1`] = `
 <div>
   <div
-    class="sc-jqUVSM cARRwl"
+    class="sc-iqcoie exnKan"
   >
     <article
-      class="sc-eCYdqJ eopLEu"
+      class="sc-gKXOVf eLEpnw"
     >
       <header>
         <picture
@@ -23,7 +23,7 @@ exports[`renders Interactive comments section 1`] = `
           />
         </picture>
         <span
-          class="sc-gKXOVf cAhEkI"
+          class="sc-ftvSup genILV"
         >
           amyrobson
         </span>
@@ -31,18 +31,22 @@ exports[`renders Interactive comments section 1`] = `
           1 month ago
         </span>
       </header>
-      <p>
-        Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
-      </p>
+      <div
+        id="content"
+      >
+        <p>
+          Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
+        </p>
+      </div>
       <div
         id="votes"
       >
         <div
-          class="sc-dkzDqf fIRSEx"
+          class="sc-eCYdqJ cVATYX"
           role="widget"
         >
           <button
-            class="sc-hKMtZM dbWWXw"
+            class="sc-jSMfEi bumZEX"
             type="button"
           >
             <svg>
@@ -58,7 +62,7 @@ exports[`renders Interactive comments section 1`] = `
             12
           </p>
           <button
-            class="sc-hKMtZM dbWWXw"
+            class="sc-jSMfEi bumZEX"
             type="button"
           >
             <svg>
@@ -88,7 +92,7 @@ exports[`renders Interactive comments section 1`] = `
       </div>
     </article>
     <article
-      class="sc-eCYdqJ eopLEu"
+      class="sc-gKXOVf eLEpnw"
     >
       <header>
         <picture
@@ -105,7 +109,7 @@ exports[`renders Interactive comments section 1`] = `
           />
         </picture>
         <span
-          class="sc-gKXOVf cAhEkI"
+          class="sc-ftvSup genILV"
         >
           maxblagun
         </span>
@@ -113,18 +117,22 @@ exports[`renders Interactive comments section 1`] = `
           2 weeks ago
         </span>
       </header>
-      <p>
-        Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!
-      </p>
+      <div
+        id="content"
+      >
+        <p>
+          Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!
+        </p>
+      </div>
       <div
         id="votes"
       >
         <div
-          class="sc-dkzDqf fIRSEx"
+          class="sc-eCYdqJ cVATYX"
           role="widget"
         >
           <button
-            class="sc-hKMtZM dbWWXw"
+            class="sc-jSMfEi bumZEX"
             type="button"
           >
             <svg>
@@ -140,7 +148,7 @@ exports[`renders Interactive comments section 1`] = `
             5
           </p>
           <button
-            class="sc-hKMtZM dbWWXw"
+            class="sc-jSMfEi bumZEX"
             type="button"
           >
             <svg>
@@ -170,10 +178,10 @@ exports[`renders Interactive comments section 1`] = `
       </div>
     </article>
     <div
-      class="sc-jqUVSM sc-kDDrLX cARRwl cJWLJF"
+      class="sc-iqcoie sc-crXcEl exnKan jdJTIT"
     >
       <article
-        class="sc-eCYdqJ eopLEu"
+        class="sc-gKXOVf eLEpnw"
       >
         <header>
           <picture
@@ -190,7 +198,7 @@ exports[`renders Interactive comments section 1`] = `
             />
           </picture>
           <span
-            class="sc-gKXOVf cAhEkI"
+            class="sc-ftvSup genILV"
           >
             ramsesmiron
           </span>
@@ -198,25 +206,27 @@ exports[`renders Interactive comments section 1`] = `
             1 week ago
           </span>
         </header>
-        <p>
-          <span
-            class="sc-jSMfEi iqwptk"
-          >
-            @
-            maxblagun
-             
-          </span>
-          If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.
-        </p>
+        <div
+          id="content"
+        >
+          <p>
+            <span
+              class="sc-iBkjds xMmsn"
+            >
+              @maxblagun 
+            </span>
+            If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.
+          </p>
+        </div>
         <div
           id="votes"
         >
           <div
-            class="sc-dkzDqf fIRSEx"
+            class="sc-eCYdqJ cVATYX"
             role="widget"
           >
             <button
-              class="sc-hKMtZM dbWWXw"
+              class="sc-jSMfEi bumZEX"
               type="button"
             >
               <svg>
@@ -232,7 +242,7 @@ exports[`renders Interactive comments section 1`] = `
               4
             </p>
             <button
-              class="sc-hKMtZM dbWWXw"
+              class="sc-jSMfEi bumZEX"
               type="button"
             >
               <svg>
@@ -262,7 +272,7 @@ exports[`renders Interactive comments section 1`] = `
         </div>
       </article>
       <article
-        class="sc-eCYdqJ eopLEu"
+        class="sc-gKXOVf eLEpnw"
       >
         <header>
           <picture
@@ -279,12 +289,12 @@ exports[`renders Interactive comments section 1`] = `
             />
           </picture>
           <span
-            class="sc-gKXOVf cAhEkI"
+            class="sc-ftvSup genILV"
           >
             juliusomo
           </span>
           <span
-            class="sc-iBkjds iXTMIL"
+            class="sc-papXJ TvwuZ"
           >
             you
           </span>
@@ -292,25 +302,27 @@ exports[`renders Interactive comments section 1`] = `
             2 days ago
           </span>
         </header>
-        <p>
-          <span
-            class="sc-jSMfEi iqwptk"
-          >
-            @
-            ramsesmiron
-             
-          </span>
-          I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.
-        </p>
+        <div
+          id="content"
+        >
+          <p>
+            <span
+              class="sc-iBkjds xMmsn"
+            >
+              @ramsesmiron 
+            </span>
+            I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.
+          </p>
+        </div>
         <div
           id="votes"
         >
           <div
-            class="sc-dkzDqf fIRSEx"
+            class="sc-eCYdqJ cVATYX"
             role="widget"
           >
             <button
-              class="sc-hKMtZM dbWWXw"
+              class="sc-jSMfEi bumZEX"
               type="button"
             >
               <svg>
@@ -326,7 +338,7 @@ exports[`renders Interactive comments section 1`] = `
               2
             </p>
             <button
-              class="sc-hKMtZM dbWWXw"
+              class="sc-jSMfEi bumZEX"
               type="button"
             >
               <svg>
@@ -367,7 +379,7 @@ exports[`renders Interactive comments section 1`] = `
       </article>
     </div>
     <form
-      class="sc-ftvSup bhApFN"
+      class="sc-jqUVSM DzQvt"
     >
       <picture
         style="width: 2rem;"
@@ -384,7 +396,7 @@ exports[`renders Interactive comments section 1`] = `
       </picture>
       <textarea
         aria-label="New comment"
-        class="sc-papXJ hmxrRz"
+        class="sc-kDDrLX bcxLgZ"
         name="new-comment"
         placeholder="Add comment..."
         type="text"

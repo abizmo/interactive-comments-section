@@ -3,7 +3,7 @@
 exports[`Comment from current user should render a comment 1`] = `
 <div>
   <article
-    class="sc-eCYdqJ eopLEu"
+    class="sc-gKXOVf eLEpnw"
   >
     <header>
       <picture
@@ -20,12 +20,12 @@ exports[`Comment from current user should render a comment 1`] = `
         />
       </picture>
       <span
-        class="sc-gKXOVf cAhEkI"
+        class="sc-ftvSup genILV"
       >
         amyrobson
       </span>
       <span
-        class="sc-iBkjds iXTMIL"
+        class="sc-papXJ TvwuZ"
       >
         you
       </span>
@@ -33,18 +33,22 @@ exports[`Comment from current user should render a comment 1`] = `
         1 month ago
       </span>
     </header>
-    <p>
-      Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
-    </p>
+    <div
+      id="content"
+    >
+      <p>
+        Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
+      </p>
+    </div>
     <div
       id="votes"
     >
       <div
-        class="sc-dkzDqf fIRSEx"
+        class="sc-eCYdqJ cVATYX"
         role="widget"
       >
         <button
-          class="sc-hKMtZM dbWWXw"
+          class="sc-jSMfEi bumZEX"
           type="button"
         >
           <svg>
@@ -60,7 +64,7 @@ exports[`Comment from current user should render a comment 1`] = `
           12
         </p>
         <button
-          class="sc-hKMtZM dbWWXw"
+          class="sc-jSMfEi bumZEX"
           type="button"
         >
           <svg>
@@ -105,7 +109,7 @@ exports[`Comment from current user should render a comment 1`] = `
 exports[`Comment from other user should render a comment 1`] = `
 <div>
   <article
-    class="sc-eCYdqJ eopLEu"
+    class="sc-gKXOVf eLEpnw"
   >
     <header>
       <picture
@@ -122,7 +126,7 @@ exports[`Comment from other user should render a comment 1`] = `
         />
       </picture>
       <span
-        class="sc-gKXOVf cAhEkI"
+        class="sc-ftvSup genILV"
       >
         amyrobson
       </span>
@@ -130,18 +134,22 @@ exports[`Comment from other user should render a comment 1`] = `
         1 month ago
       </span>
     </header>
-    <p>
-      Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
-    </p>
+    <div
+      id="content"
+    >
+      <p>
+        Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
+      </p>
+    </div>
     <div
       id="votes"
     >
       <div
-        class="sc-dkzDqf fIRSEx"
+        class="sc-eCYdqJ cVATYX"
         role="widget"
       >
         <button
-          class="sc-hKMtZM dbWWXw"
+          class="sc-jSMfEi bumZEX"
           type="button"
         >
           <svg>
@@ -157,7 +165,7 @@ exports[`Comment from other user should render a comment 1`] = `
           12
         </p>
         <button
-          class="sc-hKMtZM dbWWXw"
+          class="sc-jSMfEi bumZEX"
           type="button"
         >
           <svg>

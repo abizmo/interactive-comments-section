@@ -7,7 +7,7 @@ export const Wrapper = styled.article`
   gap: 1rem;
   grid-template-areas: 
     'header header'
-    'info info'
+    'content content'
     'votes buttons';
   grid-template-columns: repeat(2, 1fr);
   padding: 1rem;
@@ -16,7 +16,7 @@ export const Wrapper = styled.article`
     column-gap: 1.5rem;
     grid-template-areas:
       'votes header buttons'
-      'votes info info';
+      'votes content content';
     grid-template-columns: min-content 3fr 1fr;
     padding: 1.5rem;
   }
@@ -29,8 +29,8 @@ export const Wrapper = styled.article`
     line-height: 1.1;
   }
 
-  & > p {
-    grid-area: info;
+  & > #content {
+    grid-area: content;
   }
 
   & > #votes {

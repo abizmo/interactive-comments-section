@@ -6,6 +6,7 @@ import { ReactComponent as Edit } from '../../assets/icons/edit.svg';
 import { ReactComponent as Reply } from '../../assets/icons/reply.svg';
 import Avatar from '../Avatar';
 import Button from '../Button';
+import EditComment from '../EditComment';
 import Voting from '../Voting';
 import {
   At, Label, Nickname, Wrapper,
@@ -14,7 +15,15 @@ import {
 function Comment({
   comment, onDelete, onEdit, onReply, replyingTo, user, you,
 }) {
+  const [updating, setUpdating] = useState(false);
   const [votes, setVotes] = useState(comment.score || 0);
+
+  const handleEdit = () => {
+    setUpdating(true);
+    onEdit();
+  };
+
+  const at = replyingTo ? `@${replyingTo} ` : '';
 
   return (
     <Wrapper>
@@ -26,16 +35,22 @@ function Comment({
         )}
         <span>{comment.createdAt}</span>
       </header>
-      <p>
-        { replyingTo && (
-          <At>
-            @
-            {replyingTo}
-            {' '}
-          </At>
-        )}
-        {comment.content}
-      </p>
+      <div id="content">
+        {
+          updating ? (
+            <EditComment value={`${at}${comment.content}`} onEdit={() => setUpdating(false)} />
+          ) : (
+            <p>
+              { replyingTo && (
+                <At>
+                  {at}
+                </At>
+              )}
+              {comment.content}
+            </p>
+          )
+        }
+      </div>
       <div id="votes">
         <Voting onVote={setVotes} votes={votes} />
       </div>
@@ -53,7 +68,7 @@ function Comment({
                 color="primary"
                 icon={Edit}
                 label="Edit"
-                onClick={onEdit}
+                onClick={handleEdit}
               />
             </>
           ) : (
