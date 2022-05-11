@@ -1,11 +1,21 @@
 import {
-  DELETE_COMMENT, DELETE_REPLY, SET_COMMENTS, UPDATE_COMMENT, UPDATE_REPLY,
+  CREATE_COMMENT, DELETE_COMMENT, DELETE_REPLY, SET_COMMENTS, UPDATE_COMMENT, UPDATE_REPLY,
 } from './commentsActions';
 
 function commentsReducer(state, action) {
   switch (action.type) {
-    case SET_COMMENTS: {
-      return { ...action.payload };
+    case CREATE_COMMENT: {
+      const comment = {
+        id: parseInt(Math.random() * 1000, 10),
+        content: action.payload,
+        createdAt: '1 minute ago',
+        score: 0,
+        user: { ...state.currentUser },
+        replies: [],
+      };
+      const comments = [...state.comments, comment];
+
+      return { ...state, comments };
     }
 
     case DELETE_COMMENT: {
@@ -22,6 +32,10 @@ function commentsReducer(state, action) {
         ...state,
         comments,
       };
+    }
+
+    case SET_COMMENTS: {
+      return { ...action.payload };
     }
 
     case UPDATE_COMMENT: {

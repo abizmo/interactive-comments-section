@@ -40,8 +40,12 @@ function EditComment({ at, content, onEdit }) {
   const [inputHeight, setInputHeight] = useState(96);
 
   const handleChange = ({ target }) => {
-    const [, ...commentArray] = target.value.split(' ');
-    setComment(commentArray.join(' '));
+    if (at) {
+      const [, ...commentArray] = target.value.split(' ');
+      setComment(commentArray.join(' '));
+    } else {
+      setComment(target.value);
+    }
   };
 
   const handleFocus = ({ target }) => {

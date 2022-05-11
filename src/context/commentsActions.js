@@ -1,12 +1,13 @@
-export const SET_COMMENTS = 'SET_COMMENTS';
+export const CREATE_COMMENT = 'CREATE_COMMENT';
 export const DELETE_COMMENT = 'DELETE_COMMENT';
 export const DELETE_REPLY = 'DELETE_REPLY';
+export const SET_COMMENTS = 'SET_COMMENTS';
 export const UPDATE_COMMENT = 'UPDATE_COMMENT';
 export const UPDATE_REPLY = 'UPDATE_REPLY';
 
-export const setComments = (comments) => ({
-  type: SET_COMMENTS,
-  payload: comments,
+export const createComment = (comment) => ({
+  type: CREATE_COMMENT,
+  payload: comment,
 });
 
 export const deleteComment = (idComment) => ({
@@ -17,6 +18,11 @@ export const deleteComment = (idComment) => ({
 export const deleteReply = (idComment, idReply) => ({
   type: DELETE_REPLY,
   payload: { idComment, idReply },
+});
+
+export const setComments = (comments) => ({
+  type: SET_COMMENTS,
+  payload: comments,
 });
 
 export const updateComment = (idComment, comment) => ({

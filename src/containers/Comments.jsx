@@ -5,6 +5,7 @@ import Comment from '../components/Comment';
 import NewComment from '../components/NewComment';
 import { useComments } from '../context/comments';
 import {
+  createComment,
   deleteComment, deleteReply, setComments, updateComment, updateReply,
 } from '../context/commentsActions';
 import data from '../data.json';
@@ -33,6 +34,12 @@ function Comments() {
   }, []);
 
   if (!comments) return <p>Loading...</p>;
+
+  const handleCreate = (content) => {
+    if (!content) return;
+
+    dispatch(createComment(content));
+  };
 
   return (
     <Wrapper>
@@ -64,7 +71,7 @@ function Comments() {
           )}
         </React.Fragment>
       ))}
-      <NewComment user={currentUser} />
+      <NewComment onCreate={handleCreate} user={currentUser} />
     </Wrapper>
   );
 }

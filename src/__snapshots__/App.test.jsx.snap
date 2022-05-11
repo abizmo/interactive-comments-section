@@ -397,7 +397,7 @@ exports[`renders Interactive comments section 1`] = `
       <textarea
         aria-label="New comment"
         class="sc-kDDrLX bcxLgZ"
-        name="new-comment"
+        name="newComment"
         placeholder="Add comment..."
         type="text"
       />

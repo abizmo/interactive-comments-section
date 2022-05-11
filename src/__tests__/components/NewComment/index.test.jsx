@@ -16,7 +16,7 @@ describe('NewComment components', () => {
   test('should render', () => {
     render(
       <Theme>
-        <NewComment user={user} />
+        <NewComment onCreate={() => {}} user={user} />
       </Theme>,
     );
 

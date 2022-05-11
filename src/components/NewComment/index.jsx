@@ -60,20 +60,27 @@ const Input = styled.textarea`
   }
 `;
 
-function NewComment({ user }) {
+function NewComment({ onCreate, user }) {
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+
+    onCreate(evt.target.newComment.value);
+    // eslint-disable-next-line no-param-reassign
+    evt.target.newComment.value = '';
+  };
+
   return (
-    <WrapperForm>
+    <WrapperForm onSubmit={handleSubmit}>
       <Avatar user={user} />
       <Input
         type="text"
-        name="new-comment"
+        name="newComment"
         aria-label="New comment"
         placeholder="Add comment..."
       />
       <Button
         color="primary"
         label="send"
-        onClick={() => {}}
         size="small"
         type="submit"
         variant="contained"
@@ -83,6 +90,7 @@ function NewComment({ user }) {
 }
 
 NewComment.propTypes = {
+  onCreate: PropTypes.func.isRequired,
   user: PropTypes.shape({
     image: PropTypes.shape().isRequired,
     username: PropTypes.string.isRequired,
