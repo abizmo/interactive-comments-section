@@ -27,7 +27,7 @@ function Comment({
     setUpdating(false);
   };
 
-  const at = replyingTo ? `@${replyingTo} ` : '';
+  const at = replyingTo && `@${replyingTo} `;
 
   return (
     <Wrapper>
@@ -42,7 +42,11 @@ function Comment({
       <div id="content">
         {
           updating ? (
-            <EditComment value={`${at}${comment.content}`} onEdit={handleEdit} />
+            <EditComment
+              at={at}
+              content={`${comment.content}`}
+              onEdit={handleEdit}
+            />
           ) : (
             <p>
               { replyingTo && (
@@ -107,7 +111,7 @@ Comment.propTypes = {
 };
 
 Comment.defaultProps = {
-  replyingTo: null,
+  replyingTo: '',
   you: false,
 };
 
