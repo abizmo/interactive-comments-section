@@ -18,9 +18,13 @@ function Comment({
   const [updating, setUpdating] = useState(false);
   const [votes, setVotes] = useState(comment.score || 0);
 
-  const handleEdit = () => {
+  const startEdit = () => {
     setUpdating(true);
-    onEdit();
+  };
+
+  const handleEdit = (c) => {
+    onEdit(c);
+    setUpdating(false);
   };
 
   const at = replyingTo ? `@${replyingTo} ` : '';
@@ -38,7 +42,7 @@ function Comment({
       <div id="content">
         {
           updating ? (
-            <EditComment value={`${at}${comment.content}`} onEdit={() => setUpdating(false)} />
+            <EditComment value={`${at}${comment.content}`} onEdit={handleEdit} />
           ) : (
             <p>
               { replyingTo && (
@@ -68,7 +72,7 @@ function Comment({
                 color="primary"
                 icon={Edit}
                 label="Edit"
-                onClick={handleEdit}
+                onClick={startEdit}
               />
             </>
           ) : (

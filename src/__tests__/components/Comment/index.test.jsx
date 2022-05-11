@@ -107,6 +107,9 @@ describe('Comment from current user', () => {
     const button = screen.getByText('Edit');
 
     fireEvent.click(button);
+    const updateButton = screen.getByText(/update/i);
+
+    fireEvent.click(updateButton);
     expect(handleEdit).toHaveBeenCalled();
   });
 });

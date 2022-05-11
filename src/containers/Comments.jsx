@@ -4,7 +4,9 @@ import styled from 'styled-components';
 import Comment from '../components/Comment';
 import NewComment from '../components/NewComment';
 import { useComments } from '../context/comments';
-import { deleteComment, deleteReply, setComments } from '../context/commentsActions';
+import {
+  deleteComment, deleteReply, setComments, updateComment, updateReply,
+} from '../context/commentsActions';
 import data from '../data.json';
 
 const Wrapper = styled.div`
@@ -39,7 +41,7 @@ function Comments() {
           <Comment
             comment={comment}
             onDelete={() => dispatch(deleteComment(comment.id))}
-            onEdit={() => {}}
+            onEdit={(c) => dispatch(updateComment(comment.id, c))}
             onReply={() => {}}
             user={user}
             you={user.username === currentUser.username}
@@ -51,7 +53,7 @@ function Comments() {
                   key={reply.id}
                   comment={reply}
                   onDelete={() => dispatch(deleteReply(comment.id, reply.id))}
-                  onEdit={() => {}}
+                  onEdit={(r) => dispatch(updateReply(comment.id, reply.id, r))}
                   onReply={() => {}}
                   replyingTo={replyingTo}
                   user={replier}

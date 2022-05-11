@@ -38,14 +38,16 @@ const Input = styled.textarea`
 function EditComment({ onEdit, value }) {
   const [comment, setComment] = useState(value);
   const [inputHeight, setInputHeight] = useState(96);
+
   const handleFocus = ({ target }) => {
     const { length } = target.value;
     target.setSelectionRange(length, length);
     setInputHeight(target.scrollHeight);
   };
+
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    onEdit();
+    onEdit(comment);
   };
 
   return (
