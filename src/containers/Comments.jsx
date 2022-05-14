@@ -47,11 +47,11 @@ function Comments() {
         <React.Fragment key={comment.id}>
           <Comment
             comment={comment}
+            currentUser={currentUser}
             onDelete={() => dispatch(deleteComment(comment.id))}
             onEdit={(c) => dispatch(updateComment(comment.id, c))}
             onReply={() => {}}
             user={user}
-            you={user.username === currentUser.username}
           />
           { replies.length > 0 && (
             <WrapperReplies>
@@ -59,12 +59,12 @@ function Comments() {
                 <Comment
                   key={reply.id}
                   comment={reply}
+                  currentUser={currentUser}
                   onDelete={() => dispatch(deleteReply(comment.id, reply.id))}
                   onEdit={(r) => dispatch(updateReply(comment.id, reply.id, r))}
                   onReply={() => {}}
                   replyingTo={replyingTo}
                   user={replier}
-                  you={replier.username === currentUser.username}
                 />
               ))}
             </WrapperReplies>

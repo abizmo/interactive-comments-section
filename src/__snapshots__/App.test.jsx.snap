@@ -6,7 +6,7 @@ exports[`renders Interactive comments section 1`] = `
     class="sc-iqcoie exnKan"
   >
     <article
-      class="sc-gKXOVf eLEpnw"
+      class="sc-ftvSup knMRhx"
     >
       <header>
         <picture
@@ -23,7 +23,7 @@ exports[`renders Interactive comments section 1`] = `
           />
         </picture>
         <span
-          class="sc-ftvSup genILV"
+          class="sc-jqUVSM gLDGIF"
         >
           amyrobson
         </span>
@@ -42,11 +42,11 @@ exports[`renders Interactive comments section 1`] = `
         id="votes"
       >
         <div
-          class="sc-eCYdqJ cVATYX"
+          class="sc-gKXOVf hhbAk"
           role="widget"
         >
           <button
-            class="sc-jSMfEi bumZEX"
+            class="sc-iBkjds bidZKA"
             type="button"
           >
             <svg>
@@ -62,7 +62,7 @@ exports[`renders Interactive comments section 1`] = `
             12
           </p>
           <button
-            class="sc-jSMfEi bumZEX"
+            class="sc-iBkjds bidZKA"
             type="button"
           >
             <svg>
@@ -92,7 +92,7 @@ exports[`renders Interactive comments section 1`] = `
       </div>
     </article>
     <article
-      class="sc-gKXOVf eLEpnw"
+      class="sc-ftvSup knMRhx"
     >
       <header>
         <picture
@@ -109,7 +109,7 @@ exports[`renders Interactive comments section 1`] = `
           />
         </picture>
         <span
-          class="sc-ftvSup genILV"
+          class="sc-jqUVSM gLDGIF"
         >
           maxblagun
         </span>
@@ -128,11 +128,11 @@ exports[`renders Interactive comments section 1`] = `
         id="votes"
       >
         <div
-          class="sc-eCYdqJ cVATYX"
+          class="sc-gKXOVf hhbAk"
           role="widget"
         >
           <button
-            class="sc-jSMfEi bumZEX"
+            class="sc-iBkjds bidZKA"
             type="button"
           >
             <svg>
@@ -148,7 +148,7 @@ exports[`renders Interactive comments section 1`] = `
             5
           </p>
           <button
-            class="sc-jSMfEi bumZEX"
+            class="sc-iBkjds bidZKA"
             type="button"
           >
             <svg>
@@ -181,7 +181,7 @@ exports[`renders Interactive comments section 1`] = `
       class="sc-iqcoie sc-crXcEl exnKan jdJTIT"
     >
       <article
-        class="sc-gKXOVf eLEpnw"
+        class="sc-ftvSup knMRhx"
       >
         <header>
           <picture
@@ -198,7 +198,7 @@ exports[`renders Interactive comments section 1`] = `
             />
           </picture>
           <span
-            class="sc-ftvSup genILV"
+            class="sc-jqUVSM gLDGIF"
           >
             ramsesmiron
           </span>
@@ -211,7 +211,7 @@ exports[`renders Interactive comments section 1`] = `
         >
           <p>
             <span
-              class="sc-iBkjds xMmsn"
+              class="sc-papXJ cqQOXh"
             >
               @maxblagun 
             </span>
@@ -222,11 +222,11 @@ exports[`renders Interactive comments section 1`] = `
           id="votes"
         >
           <div
-            class="sc-eCYdqJ cVATYX"
+            class="sc-gKXOVf hhbAk"
             role="widget"
           >
             <button
-              class="sc-jSMfEi bumZEX"
+              class="sc-iBkjds bidZKA"
               type="button"
             >
               <svg>
@@ -242,7 +242,7 @@ exports[`renders Interactive comments section 1`] = `
               4
             </p>
             <button
-              class="sc-jSMfEi bumZEX"
+              class="sc-iBkjds bidZKA"
               type="button"
             >
               <svg>
@@ -272,7 +272,7 @@ exports[`renders Interactive comments section 1`] = `
         </div>
       </article>
       <article
-        class="sc-gKXOVf eLEpnw"
+        class="sc-ftvSup knMRhx"
       >
         <header>
           <picture
@@ -289,12 +289,12 @@ exports[`renders Interactive comments section 1`] = `
             />
           </picture>
           <span
-            class="sc-ftvSup genILV"
+            class="sc-jqUVSM gLDGIF"
           >
             juliusomo
           </span>
           <span
-            class="sc-papXJ TvwuZ"
+            class="sc-kDDrLX fuBzsf"
           >
             you
           </span>
@@ -307,7 +307,7 @@ exports[`renders Interactive comments section 1`] = `
         >
           <p>
             <span
-              class="sc-iBkjds xMmsn"
+              class="sc-papXJ cqQOXh"
             >
               @ramsesmiron 
             </span>
@@ -318,11 +318,11 @@ exports[`renders Interactive comments section 1`] = `
           id="votes"
         >
           <div
-            class="sc-eCYdqJ cVATYX"
+            class="sc-gKXOVf hhbAk"
             role="widget"
           >
             <button
-              class="sc-jSMfEi bumZEX"
+              class="sc-iBkjds bidZKA"
               type="button"
             >
               <svg>
@@ -338,7 +338,7 @@ exports[`renders Interactive comments section 1`] = `
               2
             </p>
             <button
-              class="sc-jSMfEi bumZEX"
+              class="sc-iBkjds bidZKA"
               type="button"
             >
               <svg>
@@ -379,7 +379,7 @@ exports[`renders Interactive comments section 1`] = `
       </article>
     </div>
     <form
-      class="sc-jqUVSM DzQvt"
+      class="sc-eCYdqJ kDXJrn"
     >
       <picture
         style="width: 2rem;"
@@ -396,7 +396,7 @@ exports[`renders Interactive comments section 1`] = `
       </picture>
       <textarea
         aria-label="New comment"
-        class="sc-kDDrLX bcxLgZ"
+        class="sc-jSMfEi dHgca"
         name="newComment"
         placeholder="Add comment..."
         type="text"

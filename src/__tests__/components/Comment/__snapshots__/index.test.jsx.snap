@@ -3,7 +3,7 @@
 exports[`Comment from current user should render a comment 1`] = `
 <div>
   <article
-    class="sc-gKXOVf eLEpnw"
+    class="sc-ftvSup knMRhx"
   >
     <header>
       <picture
@@ -20,12 +20,12 @@ exports[`Comment from current user should render a comment 1`] = `
         />
       </picture>
       <span
-        class="sc-ftvSup genILV"
+        class="sc-jqUVSM gLDGIF"
       >
         amyrobson
       </span>
       <span
-        class="sc-papXJ TvwuZ"
+        class="sc-kDDrLX fuBzsf"
       >
         you
       </span>
@@ -44,11 +44,11 @@ exports[`Comment from current user should render a comment 1`] = `
       id="votes"
     >
       <div
-        class="sc-eCYdqJ cVATYX"
+        class="sc-gKXOVf hhbAk"
         role="widget"
       >
         <button
-          class="sc-jSMfEi bumZEX"
+          class="sc-iBkjds bidZKA"
           type="button"
         >
           <svg>
@@ -64,7 +64,7 @@ exports[`Comment from current user should render a comment 1`] = `
           12
         </p>
         <button
-          class="sc-jSMfEi bumZEX"
+          class="sc-iBkjds bidZKA"
           type="button"
         >
           <svg>
@@ -109,7 +109,7 @@ exports[`Comment from current user should render a comment 1`] = `
 exports[`Comment from other user should render a comment 1`] = `
 <div>
   <article
-    class="sc-gKXOVf eLEpnw"
+    class="sc-ftvSup knMRhx"
   >
     <header>
       <picture
@@ -126,7 +126,7 @@ exports[`Comment from other user should render a comment 1`] = `
         />
       </picture>
       <span
-        class="sc-ftvSup genILV"
+        class="sc-jqUVSM gLDGIF"
       >
         amyrobson
       </span>
@@ -145,11 +145,11 @@ exports[`Comment from other user should render a comment 1`] = `
       id="votes"
     >
       <div
-        class="sc-eCYdqJ cVATYX"
+        class="sc-gKXOVf hhbAk"
         role="widget"
       >
         <button
-          class="sc-jSMfEi bumZEX"
+          class="sc-iBkjds bidZKA"
           type="button"
         >
           <svg>
@@ -165,7 +165,7 @@ exports[`Comment from other user should render a comment 1`] = `
           12
         </p>
         <button
-          class="sc-jSMfEi bumZEX"
+          class="sc-iBkjds bidZKA"
           type="button"
         >
           <svg>
