@@ -1,10 +1,8 @@
-import {
-  CREATE_COMMENT, DELETE_COMMENT, DELETE_REPLY, SET_COMMENTS, UPDATE_COMMENT, UPDATE_REPLY,
-} from './commentsActions';
+import * as actions from './commentsActions';
 
 function commentsReducer(state, action) {
   switch (action.type) {
-    case CREATE_COMMENT: {
+    case actions.CREATE_COMMENT: {
       const comment = {
         id: parseInt(Math.random() * 1000, 10),
         content: action.payload,
@@ -18,11 +16,28 @@ function commentsReducer(state, action) {
       return { ...state, comments };
     }
 
-    case DELETE_COMMENT: {
+    case actions.CREATE_REPLY: {
+      const newReply = {
+        id: parseInt(Math.random() * 1000, 10),
+        content: action.payload.content,
+        createdAt: '1 minute ago',
+        score: 0,
+        replyingTo: action.payload.replyingTo,
+        user: { ...state.currentUser },
+      };
+
+      const newComments = state.comments.map((c) => (c.id !== action.payload.commentId
+        ? c
+        : { ...c, replies: [...c.replies, newReply] }));
+
+      return { ...state, comments: newComments };
+    }
+
+    case actions.DELETE_COMMENT: {
       return { ...state, comments: state.comments.filter((c) => c.id !== action.payload) };
     }
 
-    case DELETE_REPLY: {
+    case actions.DELETE_REPLY: {
       const comments = state.comments
         .map((c) => (c.id === action.payload.idComment
           ? { ...c, replies: c.replies.filter((r) => r.id !== action.payload.idReply) }
@@ -34,11 +49,11 @@ function commentsReducer(state, action) {
       };
     }
 
-    case SET_COMMENTS: {
+    case actions.SET_COMMENTS: {
       return { ...action.payload };
     }
 
-    case UPDATE_COMMENT: {
+    case actions.UPDATE_COMMENT: {
       return {
         ...state,
         comments: state.comments.map((c) => (c.id === action.payload.idComment
@@ -47,7 +62,7 @@ function commentsReducer(state, action) {
       };
     }
 
-    case UPDATE_REPLY: {
+    case actions.UPDATE_REPLY: {
       return {
         ...state,
         comments: state.comments

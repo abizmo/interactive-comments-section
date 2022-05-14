@@ -6,6 +6,7 @@ import NewComment from '../components/NewComment';
 import { useComments } from '../context/comments';
 import {
   createComment,
+  createReply,
   deleteComment, deleteReply, setComments, updateComment, updateReply,
 } from '../context/commentsActions';
 import data from '../data.json';
@@ -41,6 +42,12 @@ function Comments() {
     dispatch(createComment(content));
   };
 
+  const handleReply = (content, commentId, replyingTo) => {
+    if (!content) return;
+
+    dispatch(createReply(content, commentId, replyingTo));
+  };
+
   return (
     <Wrapper>
       {comments.map(({ replies, user, ...comment }) => (
@@ -50,7 +57,7 @@ function Comments() {
             currentUser={currentUser}
             onDelete={() => dispatch(deleteComment(comment.id))}
             onEdit={(c) => dispatch(updateComment(comment.id, c))}
-            onReply={() => {}}
+            onReply={(r) => handleReply(r, comment.id, user.username)}
             user={user}
           />
           { replies.length > 0 && (
@@ -62,7 +69,7 @@ function Comments() {
                   currentUser={currentUser}
                   onDelete={() => dispatch(deleteReply(comment.id, reply.id))}
                   onEdit={(r) => dispatch(updateReply(comment.id, reply.id, r))}
-                  onReply={() => {}}
+                  onReply={(r) => handleReply(r, comment.id, replier.username)}
                   replyingTo={replyingTo}
                   user={replier}
                 />
