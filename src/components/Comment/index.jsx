@@ -7,38 +7,59 @@ import { ReactComponent as Reply } from '../../assets/icons/reply.svg';
 import Avatar from '../Avatar';
 import Button from '../Button';
 import EditComment from '../EditComment';
+import NewComment from '../NewComment';
 import Voting from '../Voting';
 import {
   At, Label, Nickname, Wrapper,
 } from './style';
 
 function Comment({
-  comment, onDelete, onEdit, onReply, replyingTo, user, you,
+  comment, currentUser, onDelete, onEdit, onReply, replyingTo, user,
 }) {
+  const [replying, setReplying] = useState(false);
   const [updating, setUpdating] = useState(false);
   const [votes, setVotes] = useState(comment.score || 0);
 
-  const handleEdit = () => {
+  const startEdit = () => {
     setUpdating(true);
-    onEdit();
   };
 
-  const at = replyingTo ? `@${replyingTo} ` : '';
+  const startReply = () => {
+    setReplying(true);
+  };
+
+  const handleEdit = (c) => {
+    onEdit(c);
+    setUpdating(false);
+  };
+
+  const handleReply = (r) => {
+    onReply(r, comment.id, user.username);
+    setReplying(false);
+  };
+
+  const at = replyingTo && `@${replyingTo} `;
+  const you = user.username === currentUser.username;
 
   return (
-    <Wrapper>
-      <header>
-        <Avatar user={user} />
-        <Nickname>{user.username}</Nickname>
-        { you && (
+    <>
+      <Wrapper>
+        <header>
+          <Avatar user={user} />
+          <Nickname>{user.username}</Nickname>
+          { you && (
           <Label>you</Label>
-        )}
-        <span>{comment.createdAt}</span>
-      </header>
-      <div id="content">
-        {
+          )}
+          <span>{comment.createdAt}</span>
+        </header>
+        <div id="content">
+          {
           updating ? (
-            <EditComment value={`${at}${comment.content}`} onEdit={() => setUpdating(false)} />
+            <EditComment
+              at={at}
+              content={`${comment.content}`}
+              onEdit={handleEdit}
+            />
           ) : (
             <p>
               { replyingTo && (
@@ -50,12 +71,12 @@ function Comment({
             </p>
           )
         }
-      </div>
-      <div id="votes">
-        <Voting onVote={setVotes} votes={votes} />
-      </div>
-      <div id="buttons">
-        {
+        </div>
+        <div id="votes">
+          <Voting onVote={setVotes} votes={votes} />
+        </div>
+        <div id="buttons">
+          {
           you ? (
             <>
               <Button
@@ -68,7 +89,7 @@ function Comment({
                 color="primary"
                 icon={Edit}
                 label="Edit"
-                onClick={handleEdit}
+                onClick={startEdit}
               />
             </>
           ) : (
@@ -76,12 +97,20 @@ function Comment({
               color="primary"
               icon={Reply}
               label="Reply"
-              onClick={onReply}
+              onClick={startReply}
             />
           )
         }
-      </div>
-    </Wrapper>
+        </div>
+      </Wrapper>
+      { replying && (
+        <NewComment
+          onCreate={handleReply}
+          replyingTo={user.username}
+          user={currentUser}
+        />
+      )}
+    </>
   );
 }
 
@@ -92,6 +121,10 @@ Comment.propTypes = {
     createdAt: PropTypes.string.isRequired,
     score: PropTypes.number,
   }).isRequired,
+  currentUser: PropTypes.shape({
+    image: PropTypes.shape().isRequired,
+    username: PropTypes.string.isRequired,
+  }).isRequired,
   onDelete: PropTypes.func.isRequired,
   onEdit: PropTypes.func.isRequired,
   onReply: PropTypes.func.isRequired,
@@ -99,12 +132,10 @@ Comment.propTypes = {
   user: PropTypes.shape({
     username: PropTypes.string.isRequired,
   }).isRequired,
-  you: PropTypes.bool,
 };
 
 Comment.defaultProps = {
-  replyingTo: null,
-  you: false,
+  replyingTo: '',
 };
 
 export default Comment;

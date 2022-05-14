@@ -13,6 +13,14 @@ const comment = {
   score: 12,
 };
 
+const currentUser = {
+  image: {
+    png: './images/avatars/image-juliusomo.png',
+    webp: './images/avatars/image-juliusomo.webp',
+  },
+  username: 'juliusomo',
+};
+
 const user = {
   image: {
     png: './images/avatars/image-amyrobson.png',
@@ -41,6 +49,7 @@ describe('Comment from other user', () => {
       <Theme>
         <Comment
           comment={comment}
+          currentUser={currentUser}
           onDelete={handleDelete}
           onEdit={handleEdit}
           onReply={handleReply}
@@ -67,6 +76,9 @@ describe('Comment from other user', () => {
     const button = screen.getByText('Reply');
 
     fireEvent.click(button);
+    const updateButton = screen.getByText(/send/i);
+
+    fireEvent.click(updateButton);
     expect(handleReply).toHaveBeenCalled();
   });
 });
@@ -77,11 +89,11 @@ describe('Comment from current user', () => {
       <Theme>
         <Comment
           comment={comment}
+          currentUser={user}
           onDelete={handleDelete}
           onEdit={handleEdit}
           onReply={handleReply}
           user={user}
-          you
         />
       </Theme>,
     );
@@ -107,6 +119,9 @@ describe('Comment from current user', () => {
     const button = screen.getByText('Edit');
 
     fireEvent.click(button);
+    const updateButton = screen.getByText(/update/i);
+
+    fireEvent.click(updateButton);
     expect(handleEdit).toHaveBeenCalled();
   });
 });
@@ -117,6 +132,7 @@ describe('Replied to some user', () => {
       <Theme>
         <Comment
           comment={comment}
+          currentUser={currentUser}
           onDelete={handleDelete}
           onEdit={handleEdit}
           onReply={handleReply}

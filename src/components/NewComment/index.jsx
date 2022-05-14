@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -60,20 +60,33 @@ const Input = styled.textarea`
   }
 `;
 
-function NewComment({ user }) {
+function NewComment({ onCreate, replyingTo, user }) {
+  const [comment, setComment] = useState(replyingTo && `@${replyingTo} `);
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+
+    if (replyingTo) {
+      const [, ...contentArray] = comment.split(' ');
+      onCreate(contentArray.join(' '));
+    } else {
+      onCreate(comment);
+    }
+  };
+
   return (
-    <WrapperForm>
+    <WrapperForm onSubmit={handleSubmit}>
       <Avatar user={user} />
       <Input
-        type="text"
-        name="new-comment"
         aria-label="New comment"
+        name="newComment"
+        onChange={({ target }) => setComment(target.value)}
         placeholder="Add comment..."
+        type="text"
+        value={comment}
       />
       <Button
         color="primary"
         label="send"
-        onClick={() => {}}
         size="small"
         type="submit"
         variant="contained"
@@ -83,10 +96,16 @@ function NewComment({ user }) {
 }
 
 NewComment.propTypes = {
+  onCreate: PropTypes.func.isRequired,
+  replyingTo: PropTypes.string,
   user: PropTypes.shape({
     image: PropTypes.shape().isRequired,
     username: PropTypes.string.isRequired,
   }).isRequired,
+};
+
+NewComment.defaultProps = {
+  replyingTo: '',
 };
 
 export default NewComment;

@@ -1,8 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 import Comment from '../components/Comment';
 import NewComment from '../components/NewComment';
+import { useComments } from '../context/comments';
+import {
+  createComment,
+  createReply,
+  deleteComment, deleteReply, setComments, updateComment, updateReply,
+} from '../context/commentsActions';
 import data from '../data.json';
 
 const Wrapper = styled.div`
@@ -22,15 +28,25 @@ const WrapperReplies = styled(Wrapper)`
 `;
 
 function Comments() {
-  const [comments, setComments] = useState(null);
-  const [currentUser, setCurrentUser] = useState(null);
+  const { state: { comments, currentUser }, dispatch } = useComments();
 
   useEffect(() => {
-    setComments(data.comments);
-    setCurrentUser(data.currentUser);
+    dispatch(setComments(data));
   }, []);
 
   if (!comments) return <p>Loading...</p>;
+
+  const handleCreate = (content) => {
+    if (!content) return;
+
+    dispatch(createComment(content));
+  };
+
+  const handleReply = (content, commentId, replyingTo) => {
+    if (!content) return;
+
+    dispatch(createReply(content, commentId, replyingTo));
+  };
 
   return (
     <Wrapper>
@@ -38,11 +54,11 @@ function Comments() {
         <React.Fragment key={comment.id}>
           <Comment
             comment={comment}
-            onDelete={() => {}}
-            onEdit={() => {}}
-            onReply={() => {}}
+            currentUser={currentUser}
+            onDelete={() => dispatch(deleteComment(comment.id))}
+            onEdit={(c) => dispatch(updateComment(comment.id, c))}
+            onReply={(r) => handleReply(r, comment.id, user.username)}
             user={user}
-            you={user.username === currentUser.username}
           />
           { replies.length > 0 && (
             <WrapperReplies>
@@ -50,19 +66,19 @@ function Comments() {
                 <Comment
                   key={reply.id}
                   comment={reply}
-                  onDelete={() => {}}
-                  onEdit={() => {}}
-                  onReply={() => {}}
+                  currentUser={currentUser}
+                  onDelete={() => dispatch(deleteReply(comment.id, reply.id))}
+                  onEdit={(r) => dispatch(updateReply(comment.id, reply.id, r))}
+                  onReply={(r) => handleReply(r, comment.id, replier.username)}
                   replyingTo={replyingTo}
                   user={replier}
-                  you={replier.username === currentUser.username}
                 />
               ))}
             </WrapperReplies>
           )}
         </React.Fragment>
       ))}
-      <NewComment user={currentUser} />
+      <NewComment onCreate={handleCreate} user={currentUser} />
     </Wrapper>
   );
 }

@@ -35,17 +35,28 @@ const Input = styled.textarea`
   }
 `;
 
-function EditComment({ onEdit, value }) {
-  const [comment, setComment] = useState(value);
+function EditComment({ at, content, onEdit }) {
+  const [comment, setComment] = useState(content);
   const [inputHeight, setInputHeight] = useState(96);
+
+  const handleChange = ({ target }) => {
+    if (at) {
+      const [, ...commentArray] = target.value.split(' ');
+      setComment(commentArray.join(' '));
+    } else {
+      setComment(target.value);
+    }
+  };
+
   const handleFocus = ({ target }) => {
     const { length } = target.value;
     target.setSelectionRange(length, length);
     setInputHeight(target.scrollHeight);
   };
+
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    onEdit();
+    onEdit(comment);
   };
 
   return (
@@ -54,12 +65,12 @@ function EditComment({ onEdit, value }) {
         aria-label="New comment"
         autoFocus
         name="new-comment"
-        onChange={({ target }) => setComment(target.value)}
+        onChange={handleChange}
         onFocus={handleFocus}
         placeholder="Add comment..."
         style={{ height: `${inputHeight}px` }}
         type="text"
-        value={comment}
+        value={`${at}${comment}`}
       />
       <Button
         color="primary"
@@ -73,8 +84,13 @@ function EditComment({ onEdit, value }) {
 }
 
 EditComment.propTypes = {
+  at: PropTypes.string,
+  content: PropTypes.string.isRequired,
   onEdit: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
+};
+
+EditComment.defaultProps = {
+  at: '',
 };
 
 export default EditComment;
