@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -60,23 +60,24 @@ const Input = styled.textarea`
   }
 `;
 
-function NewComment({ onCreate, user }) {
+function NewComment({ onCreate, replyingTo, user }) {
+  const [comment, setComment] = useState(replyingTo && `@${replyingTo} `);
   const handleSubmit = (evt) => {
     evt.preventDefault();
 
-    onCreate(evt.target.newComment.value);
-    // eslint-disable-next-line no-param-reassign
-    evt.target.newComment.value = '';
+    onCreate(comment);
   };
 
   return (
     <WrapperForm onSubmit={handleSubmit}>
       <Avatar user={user} />
       <Input
-        type="text"
-        name="newComment"
         aria-label="New comment"
+        name="newComment"
+        onChange={({ target }) => setComment(target.value)}
         placeholder="Add comment..."
+        type="text"
+        value={comment}
       />
       <Button
         color="primary"
@@ -91,10 +92,15 @@ function NewComment({ onCreate, user }) {
 
 NewComment.propTypes = {
   onCreate: PropTypes.func.isRequired,
+  replyingTo: PropTypes.string,
   user: PropTypes.shape({
     image: PropTypes.shape().isRequired,
     username: PropTypes.string.isRequired,
   }).isRequired,
+};
+
+NewComment.defaultProps = {
+  replyingTo: '',
 };
 
 export default NewComment;
