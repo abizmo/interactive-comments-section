@@ -65,7 +65,12 @@ function NewComment({ onCreate, replyingTo, user }) {
   const handleSubmit = (evt) => {
     evt.preventDefault();
 
-    onCreate(comment);
+    if (replyingTo) {
+      const [, ...contentArray] = comment.split(' ');
+      onCreate(contentArray.join(' '));
+    } else {
+      onCreate(comment);
+    }
   };
 
   return (
