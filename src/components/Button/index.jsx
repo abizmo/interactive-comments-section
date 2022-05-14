@@ -23,7 +23,7 @@ Button.propTypes = {
   color: PropTypes.oneOf(['neutral', 'primary', 'secondary']),
   icon: PropTypes.elementType,
   label: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   size: PropTypes.oneOf(['fit', 'small', 'big']),
   type: PropTypes.oneOf(['button', 'submit']),
   variant: PropTypes.oneOf(['text', 'contained']),
@@ -32,6 +32,7 @@ Button.propTypes = {
 Button.defaultProps = {
   color: 'neutral',
   icon: null,
+  onClick: undefined,
   size: 'fit',
   type: 'button',
   variant: 'text',
