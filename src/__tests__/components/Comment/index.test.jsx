@@ -112,6 +112,9 @@ describe('Comment from current user', () => {
     const button = screen.getByText('Delete');
 
     fireEvent.click(button);
+    const deleteButton = screen.getByText(/yes/i);
+
+    fireEvent.click(deleteButton);
     expect(handleDelete).toHaveBeenCalled();
   });
 
