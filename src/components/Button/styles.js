@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const width = {
-  big: '8.75rem',
+  big: '9.25rem',
   small: '6.5rem',
 };
 

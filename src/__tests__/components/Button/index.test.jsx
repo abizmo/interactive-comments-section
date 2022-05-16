@@ -42,6 +42,6 @@ test('renders primary contained button and match snapshot', () => {
   const result = screen.getByText(/Test/);
   expect(result).toHaveStyle('background: hsl(238, 40%, 52%)');
   expect(result).toHaveStyle('color: hsl( 0, 0%, 100%)');
-  expect(result).toHaveStyle('width: 8.75rem');
+  expect(result).toHaveStyle('width: 9.25rem');
   expect(result.getAttribute('color')).toEqual('primary');
 });
