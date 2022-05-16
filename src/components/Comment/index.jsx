@@ -7,7 +7,6 @@ import { ReactComponent as Reply } from '../../assets/icons/reply.svg';
 import Avatar from '../Avatar';
 import Button from '../Button';
 import EditComment from '../EditComment';
-import Modal from '../Modal';
 import NewComment from '../NewComment';
 import Voting from '../Voting';
 import {
@@ -17,15 +16,9 @@ import {
 function Comment({
   comment, currentUser, onDelete, onEdit, onReply, replyingTo, user,
 }) {
-  const [deleting, setDeleting] = useState(false);
   const [replying, setReplying] = useState(false);
   const [updating, setUpdating] = useState(false);
   const [votes, setVotes] = useState(comment.score || 0);
-
-  const handleDelete = () => {
-    onDelete();
-    setDeleting(false);
-  };
 
   const handleEdit = (c) => {
     onEdit(c);
@@ -35,10 +28,6 @@ function Comment({
   const handleReply = (r) => {
     onReply(r, comment.id, user.username);
     setReplying(false);
-  };
-
-  const startDelete = () => {
-    setDeleting(true);
   };
 
   const startEdit = () => {
@@ -94,7 +83,7 @@ function Comment({
                 color="secondary"
                 icon={Delete}
                 label="Delete"
-                onClick={startDelete}
+                onClick={() => onDelete(comment.id)}
               />
               <Button
                 color="primary"
@@ -120,9 +109,6 @@ function Comment({
           replyingTo={user.username}
           user={currentUser}
         />
-      )}
-      { deleting && (
-        <Modal onConfirm={handleDelete} onCancel={() => setDeleting(false)} />
       )}
     </>
   );
