@@ -3,7 +3,7 @@
 exports[`Comment from current user should render a comment 1`] = `
 <div>
   <article
-    class="sc-ftvSup knMRhx"
+    class="sc-ftvSup iiXPJY"
   >
     <header>
       <picture
@@ -19,11 +19,11 @@ exports[`Comment from current user should render a comment 1`] = `
           style="width: 100%;"
         />
       </picture>
-      <span
-        class="sc-jqUVSM gLDGIF"
+      <h2
+        class="sc-jqUVSM jkNwKZ"
       >
         amyrobson
-      </span>
+      </h2>
       <span
         class="sc-kDDrLX fuBzsf"
       >
@@ -33,12 +33,16 @@ exports[`Comment from current user should render a comment 1`] = `
         1 month ago
       </span>
     </header>
-    <div>
+    <div
+      class="content"
+    >
       <p>
         Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
       </p>
     </div>
-    <div>
+    <div
+      class="votes"
+    >
       <div
         class="sc-gKXOVf hhbAk"
         data-testid="voting"
@@ -74,7 +78,9 @@ exports[`Comment from current user should render a comment 1`] = `
         </button>
       </div>
     </div>
-    <div>
+    <div
+      class="buttons"
+    >
       <button
         class="sc-bczRLJ bDIsdp"
         color="secondary"
@@ -103,7 +109,7 @@ exports[`Comment from current user should render a comment 1`] = `
 exports[`Comment from other user should render a comment 1`] = `
 <div>
   <article
-    class="sc-ftvSup knMRhx"
+    class="sc-ftvSup iiXPJY"
   >
     <header>
       <picture
@@ -119,21 +125,25 @@ exports[`Comment from other user should render a comment 1`] = `
           style="width: 100%;"
         />
       </picture>
-      <span
-        class="sc-jqUVSM gLDGIF"
+      <h2
+        class="sc-jqUVSM jkNwKZ"
       >
         amyrobson
-      </span>
+      </h2>
       <span>
         1 month ago
       </span>
     </header>
-    <div>
+    <div
+      class="content"
+    >
       <p>
         Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
       </p>
     </div>
-    <div>
+    <div
+      class="votes"
+    >
       <div
         class="sc-gKXOVf hhbAk"
         data-testid="voting"
@@ -169,7 +179,9 @@ exports[`Comment from other user should render a comment 1`] = `
         </button>
       </div>
     </div>
-    <div>
+    <div
+      class="buttons"
+    >
       <button
         class="sc-bczRLJ gbCjDT"
         color="primary"

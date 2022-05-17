@@ -29,15 +29,15 @@ export const Wrapper = styled.article`
     line-height: 1.1;
   }
 
-  & > #content {
+  & > .content {
     grid-area: content;
   }
 
-  & > #votes {
+  & > .votes {
     grid-area: votes;
   }
 
-  & > #buttons {
+  & > .buttons {
     align-self: center;
     grid-area: buttons;
     justify-self: end;
@@ -51,9 +51,10 @@ export const At = styled.span`
   font-weight: 500;
 `;
 
-export const Nickname = styled.span`
+export const Nickname = styled.h2`
   color: ${({ theme }) => theme.colors['neutral-800']};
-  font-weight: 500;
+  display: inline;
+  font-size: ${({ theme }) => theme.fontSizes[500]};
   text-transform: lowercase;
 `;
 
