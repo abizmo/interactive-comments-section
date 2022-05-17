@@ -18,7 +18,6 @@ test('renders default button and match snapshot', () => {
   const result = screen.getByText(/Test/);
   expect(result).toHaveStyle('background: transparent');
   expect(result).toHaveStyle('color: hsl( 211, 10%, 45%)');
-  expect(result.getAttribute('color')).toEqual('neutral');
 
   fireEvent.click(result);
   expect(handleClick).toHaveBeenCalled();
@@ -43,5 +42,4 @@ test('renders primary contained button and match snapshot', () => {
   expect(result).toHaveStyle('background: hsl(238, 40%, 52%)');
   expect(result).toHaveStyle('color: hsl( 0, 0%, 100%)');
   expect(result).toHaveStyle('width: 9.25rem');
-  expect(result.getAttribute('color')).toEqual('primary');
 });

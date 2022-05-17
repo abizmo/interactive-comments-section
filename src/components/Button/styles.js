@@ -9,7 +9,7 @@ export const Btn = styled.button`
   align-items: center;
   background: transparent;
   border: none;
-  color: ${({ color, theme }) => theme.colors[`${color}-500`]};
+  color: ${({ $color, theme }) => theme.colors[`${$color}-500`]};
   cursor: pointer;
   display: flex;
   font-size: ${({ theme }) => theme.fontSizes[500]};
@@ -27,11 +27,11 @@ export const Btn = styled.button`
 `;
 
 export const BtnContained = styled(Btn)`
-  background: ${({ color, theme }) => theme.colors[`${color}-500`]};
+  background: ${({ $color, theme }) => theme.colors[`${$color}-500`]};
   border-radius: .5rem;
   color: ${({ theme }) => theme.colors['neutral-100']};
   font-size: ${({ theme }) => theme.fontSizes[600]};
   padding: .5rem 1rem;
   text-transform: uppercase;
-  width: ${({ size }) => (size !== 'fit' ? width[size] : 'fit-content')};
+  width: ${({ $size }) => ($size !== 'fit' ? width[$size] : 'fit-content')};
 `;

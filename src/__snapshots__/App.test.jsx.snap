@@ -81,7 +81,6 @@ exports[`renders Interactive comments section 1`] = `
       >
         <button
           class="sc-bczRLJ gbCjDT"
-          color="primary"
           type="button"
         >
           <svg>
@@ -167,7 +166,6 @@ exports[`renders Interactive comments section 1`] = `
       >
         <button
           class="sc-bczRLJ gbCjDT"
-          color="primary"
           type="button"
         >
           <svg>
@@ -261,7 +259,6 @@ exports[`renders Interactive comments section 1`] = `
         >
           <button
             class="sc-bczRLJ gbCjDT"
-            color="primary"
             type="button"
           >
             <svg>
@@ -357,7 +354,6 @@ exports[`renders Interactive comments section 1`] = `
         >
           <button
             class="sc-bczRLJ bDIsdp"
-            color="secondary"
             type="button"
           >
             <svg>
@@ -367,7 +363,6 @@ exports[`renders Interactive comments section 1`] = `
           </button>
           <button
             class="sc-bczRLJ gbCjDT"
-            color="primary"
             type="button"
           >
             <svg>
@@ -403,7 +398,6 @@ exports[`renders Interactive comments section 1`] = `
       />
       <button
         class="sc-bczRLJ sc-gsnTZi gbCjDT jNxzwF"
-        color="primary"
         type="submit"
       >
         send

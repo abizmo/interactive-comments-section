@@ -10,7 +10,7 @@ function Button({
     Component = BtnContained;
   }
   return (
-    <Component color={color} onClick={onClick} type={type} size={size}>
+    <Component $color={color} onClick={onClick} type={type} $size={size}>
       { Icon && (
         <Icon />
       )}

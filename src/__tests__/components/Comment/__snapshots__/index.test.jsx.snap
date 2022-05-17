@@ -83,7 +83,6 @@ exports[`Comment from current user should render a comment 1`] = `
     >
       <button
         class="sc-bczRLJ bDIsdp"
-        color="secondary"
         type="button"
       >
         <svg>
@@ -93,7 +92,6 @@ exports[`Comment from current user should render a comment 1`] = `
       </button>
       <button
         class="sc-bczRLJ gbCjDT"
-        color="primary"
         type="button"
       >
         <svg>
@@ -184,7 +182,6 @@ exports[`Comment from other user should render a comment 1`] = `
     >
       <button
         class="sc-bczRLJ gbCjDT"
-        color="primary"
         type="button"
       >
         <svg>
