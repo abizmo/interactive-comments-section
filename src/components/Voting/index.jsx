@@ -7,8 +7,7 @@ import { Button, Wrapper } from './style';
 
 function Voting({ onVote, votes }) {
   return (
-    // eslint-disable-next-line jsx-a11y/aria-role
-    <Wrapper role="widget">
+    <Wrapper data-testid="voting">
       <Button onClick={() => onVote((prv) => prv + 1)} type="button">
         <Plus />
         <span className="sr-only">Plus</span>

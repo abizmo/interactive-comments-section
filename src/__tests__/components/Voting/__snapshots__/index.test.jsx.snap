@@ -4,7 +4,7 @@ exports[`renders and MatchSnapshot 1`] = `
 <div>
   <div
     class="sc-bczRLJ bJYGoo"
-    role="widget"
+    data-testid="voting"
   >
     <button
       class="sc-gsnTZi czLDEY"

@@ -14,7 +14,7 @@ test('renders and MatchSnapshot', () => {
   );
 
   expect(screen.getByText('5')).toBeTruthy();
-  expect(screen.getByRole('widget')).toHaveStyle('background: hsl( 228, 33%, 97%)');
+  expect(screen.getByTestId('voting')).toHaveStyle('background: hsl( 228, 33%, 97%)');
 
   fireEvent.click(screen.getByText('Plus'));
   expect(handleVote).toHaveBeenCalled();

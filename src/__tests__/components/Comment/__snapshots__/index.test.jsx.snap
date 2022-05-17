@@ -45,7 +45,7 @@ exports[`Comment from current user should render a comment 1`] = `
     >
       <div
         class="sc-gKXOVf hhbAk"
-        role="widget"
+        data-testid="voting"
       >
         <button
           class="sc-iBkjds bidZKA"
@@ -146,7 +146,7 @@ exports[`Comment from other user should render a comment 1`] = `
     >
       <div
         class="sc-gKXOVf hhbAk"
-        role="widget"
+        data-testid="voting"
       >
         <button
           class="sc-iBkjds bidZKA"
