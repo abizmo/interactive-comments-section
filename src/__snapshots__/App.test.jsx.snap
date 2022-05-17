@@ -3,14 +3,14 @@
 exports[`renders Interactive comments section 1`] = `
 <div>
   <div
-    class="sc-ksZaOG EoJTk"
+    class="sc-hAZoDl kmrEGH"
   >
     <article
-      class="sc-ftvSup iiXPJY"
+      class="sc-papXJ XSksx"
     >
       <header>
         <picture
-          style="width: 2rem;"
+          class="sc-bczRLJ kirzjg"
         >
           <source
             srcset="/./images/avatars/image-amyrobson.webp"
@@ -23,7 +23,7 @@ exports[`renders Interactive comments section 1`] = `
           />
         </picture>
         <h2
-          class="sc-jqUVSM jkNwKZ"
+          class="sc-kDDrLX ikYFNm"
         >
           amyrobson
         </h2>
@@ -42,11 +42,11 @@ exports[`renders Interactive comments section 1`] = `
         class="votes"
       >
         <div
-          class="sc-gKXOVf hhbAk"
+          class="sc-iBkjds fTXLna"
           data-testid="voting"
         >
           <button
-            class="sc-iBkjds bidZKA"
+            class="sc-ftvSup jPGLgn"
             type="button"
           >
             <svg>
@@ -62,7 +62,7 @@ exports[`renders Interactive comments section 1`] = `
             12
           </p>
           <button
-            class="sc-iBkjds bidZKA"
+            class="sc-ftvSup jPGLgn"
             type="button"
           >
             <svg>
@@ -80,7 +80,7 @@ exports[`renders Interactive comments section 1`] = `
         class="buttons"
       >
         <button
-          class="sc-bczRLJ gbCjDT"
+          class="sc-gsnTZi dMLRiJ"
           type="button"
         >
           <svg>
@@ -91,11 +91,11 @@ exports[`renders Interactive comments section 1`] = `
       </div>
     </article>
     <article
-      class="sc-ftvSup iiXPJY"
+      class="sc-papXJ XSksx"
     >
       <header>
         <picture
-          style="width: 2rem;"
+          class="sc-bczRLJ kirzjg"
         >
           <source
             srcset="/./images/avatars/image-maxblagun.webp"
@@ -108,7 +108,7 @@ exports[`renders Interactive comments section 1`] = `
           />
         </picture>
         <h2
-          class="sc-jqUVSM jkNwKZ"
+          class="sc-kDDrLX ikYFNm"
         >
           maxblagun
         </h2>
@@ -127,11 +127,11 @@ exports[`renders Interactive comments section 1`] = `
         class="votes"
       >
         <div
-          class="sc-gKXOVf hhbAk"
+          class="sc-iBkjds fTXLna"
           data-testid="voting"
         >
           <button
-            class="sc-iBkjds bidZKA"
+            class="sc-ftvSup jPGLgn"
             type="button"
           >
             <svg>
@@ -147,7 +147,7 @@ exports[`renders Interactive comments section 1`] = `
             5
           </p>
           <button
-            class="sc-iBkjds bidZKA"
+            class="sc-ftvSup jPGLgn"
             type="button"
           >
             <svg>
@@ -165,7 +165,7 @@ exports[`renders Interactive comments section 1`] = `
         class="buttons"
       >
         <button
-          class="sc-bczRLJ gbCjDT"
+          class="sc-gsnTZi dMLRiJ"
           type="button"
         >
           <svg>
@@ -176,14 +176,14 @@ exports[`renders Interactive comments section 1`] = `
       </div>
     </article>
     <div
-      class="sc-ksZaOG sc-hAZoDl EoJTk cbkANM"
+      class="sc-hAZoDl sc-fnykZs kmrEGH krXzif"
     >
       <article
-        class="sc-ftvSup iiXPJY"
+        class="sc-papXJ XSksx"
       >
         <header>
           <picture
-            style="width: 2rem;"
+            class="sc-bczRLJ kirzjg"
           >
             <source
               srcset="/./images/avatars/image-ramsesmiron.webp"
@@ -196,7 +196,7 @@ exports[`renders Interactive comments section 1`] = `
             />
           </picture>
           <h2
-            class="sc-jqUVSM jkNwKZ"
+            class="sc-kDDrLX ikYFNm"
           >
             ramsesmiron
           </h2>
@@ -209,7 +209,7 @@ exports[`renders Interactive comments section 1`] = `
         >
           <p>
             <span
-              class="sc-papXJ cqQOXh"
+              class="sc-jqUVSM fipdKU"
             >
               @maxblagun 
             </span>
@@ -220,11 +220,11 @@ exports[`renders Interactive comments section 1`] = `
           class="votes"
         >
           <div
-            class="sc-gKXOVf hhbAk"
+            class="sc-iBkjds fTXLna"
             data-testid="voting"
           >
             <button
-              class="sc-iBkjds bidZKA"
+              class="sc-ftvSup jPGLgn"
               type="button"
             >
               <svg>
@@ -240,7 +240,7 @@ exports[`renders Interactive comments section 1`] = `
               4
             </p>
             <button
-              class="sc-iBkjds bidZKA"
+              class="sc-ftvSup jPGLgn"
               type="button"
             >
               <svg>
@@ -258,7 +258,7 @@ exports[`renders Interactive comments section 1`] = `
           class="buttons"
         >
           <button
-            class="sc-bczRLJ gbCjDT"
+            class="sc-gsnTZi dMLRiJ"
             type="button"
           >
             <svg>
@@ -269,11 +269,11 @@ exports[`renders Interactive comments section 1`] = `
         </div>
       </article>
       <article
-        class="sc-ftvSup iiXPJY"
+        class="sc-papXJ XSksx"
       >
         <header>
           <picture
-            style="width: 2rem;"
+            class="sc-bczRLJ kirzjg"
           >
             <source
               srcset="/./images/avatars/image-juliusomo.webp"
@@ -286,12 +286,12 @@ exports[`renders Interactive comments section 1`] = `
             />
           </picture>
           <h2
-            class="sc-jqUVSM jkNwKZ"
+            class="sc-kDDrLX ikYFNm"
           >
             juliusomo
           </h2>
           <span
-            class="sc-kDDrLX fuBzsf"
+            class="sc-iqcoie ibqFpS"
           >
             you
           </span>
@@ -304,7 +304,7 @@ exports[`renders Interactive comments section 1`] = `
         >
           <p>
             <span
-              class="sc-papXJ cqQOXh"
+              class="sc-jqUVSM fipdKU"
             >
               @ramsesmiron 
             </span>
@@ -315,11 +315,11 @@ exports[`renders Interactive comments section 1`] = `
           class="votes"
         >
           <div
-            class="sc-gKXOVf hhbAk"
+            class="sc-iBkjds fTXLna"
             data-testid="voting"
           >
             <button
-              class="sc-iBkjds bidZKA"
+              class="sc-ftvSup jPGLgn"
               type="button"
             >
               <svg>
@@ -335,7 +335,7 @@ exports[`renders Interactive comments section 1`] = `
               2
             </p>
             <button
-              class="sc-iBkjds bidZKA"
+              class="sc-ftvSup jPGLgn"
               type="button"
             >
               <svg>
@@ -353,7 +353,7 @@ exports[`renders Interactive comments section 1`] = `
           class="buttons"
         >
           <button
-            class="sc-bczRLJ bDIsdp"
+            class="sc-gsnTZi vpzmz"
             type="button"
           >
             <svg>
@@ -362,7 +362,7 @@ exports[`renders Interactive comments section 1`] = `
             Delete
           </button>
           <button
-            class="sc-bczRLJ gbCjDT"
+            class="sc-gsnTZi dMLRiJ"
             type="button"
           >
             <svg>
@@ -374,10 +374,10 @@ exports[`renders Interactive comments section 1`] = `
       </article>
     </div>
     <form
-      class="sc-eCYdqJ kDXJrn"
+      class="sc-jSMfEi dLsUxd"
     >
       <picture
-        style="width: 2rem;"
+        class="sc-bczRLJ kirzjg"
       >
         <source
           srcset="/./images/avatars/image-juliusomo.webp"
@@ -391,12 +391,12 @@ exports[`renders Interactive comments section 1`] = `
       </picture>
       <textarea
         aria-label="New comment"
-        class="sc-jSMfEi dHgca"
+        class="sc-gKXOVf jlVRMv"
         name="newComment"
         placeholder="Add comment..."
       />
       <button
-        class="sc-bczRLJ sc-gsnTZi gbCjDT jNxzwF"
+        class="sc-gsnTZi sc-dkzDqf dMLRiJ bAjaku"
         type="submit"
       >
         send

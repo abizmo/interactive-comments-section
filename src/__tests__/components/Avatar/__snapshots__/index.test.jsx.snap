@@ -3,7 +3,7 @@
 exports[`should render 1`] = `
 <div>
   <picture
-    style="width: 2rem;"
+    class="sc-bczRLJ kirzjg"
   >
     <source
       srcset="/../../../assets/images/avatars/image-juliusomo.webp"

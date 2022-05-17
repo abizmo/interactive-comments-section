@@ -3,11 +3,11 @@
 exports[`Comment from current user should render a comment 1`] = `
 <div>
   <article
-    class="sc-ftvSup iiXPJY"
+    class="sc-papXJ XSksx"
   >
     <header>
       <picture
-        style="width: 2rem;"
+        class="sc-bczRLJ kirzjg"
       >
         <source
           srcset="/./images/avatars/image-amyrobson.webp"
@@ -20,12 +20,12 @@ exports[`Comment from current user should render a comment 1`] = `
         />
       </picture>
       <h2
-        class="sc-jqUVSM jkNwKZ"
+        class="sc-kDDrLX ikYFNm"
       >
         amyrobson
       </h2>
       <span
-        class="sc-kDDrLX fuBzsf"
+        class="sc-iqcoie ibqFpS"
       >
         you
       </span>
@@ -44,11 +44,11 @@ exports[`Comment from current user should render a comment 1`] = `
       class="votes"
     >
       <div
-        class="sc-gKXOVf hhbAk"
+        class="sc-iBkjds fTXLna"
         data-testid="voting"
       >
         <button
-          class="sc-iBkjds bidZKA"
+          class="sc-ftvSup jPGLgn"
           type="button"
         >
           <svg>
@@ -64,7 +64,7 @@ exports[`Comment from current user should render a comment 1`] = `
           12
         </p>
         <button
-          class="sc-iBkjds bidZKA"
+          class="sc-ftvSup jPGLgn"
           type="button"
         >
           <svg>
@@ -82,7 +82,7 @@ exports[`Comment from current user should render a comment 1`] = `
       class="buttons"
     >
       <button
-        class="sc-bczRLJ bDIsdp"
+        class="sc-gsnTZi vpzmz"
         type="button"
       >
         <svg>
@@ -91,7 +91,7 @@ exports[`Comment from current user should render a comment 1`] = `
         Delete
       </button>
       <button
-        class="sc-bczRLJ gbCjDT"
+        class="sc-gsnTZi dMLRiJ"
         type="button"
       >
         <svg>
@@ -107,11 +107,11 @@ exports[`Comment from current user should render a comment 1`] = `
 exports[`Comment from other user should render a comment 1`] = `
 <div>
   <article
-    class="sc-ftvSup iiXPJY"
+    class="sc-papXJ XSksx"
   >
     <header>
       <picture
-        style="width: 2rem;"
+        class="sc-bczRLJ kirzjg"
       >
         <source
           srcset="/./images/avatars/image-amyrobson.webp"
@@ -124,7 +124,7 @@ exports[`Comment from other user should render a comment 1`] = `
         />
       </picture>
       <h2
-        class="sc-jqUVSM jkNwKZ"
+        class="sc-kDDrLX ikYFNm"
       >
         amyrobson
       </h2>
@@ -143,11 +143,11 @@ exports[`Comment from other user should render a comment 1`] = `
       class="votes"
     >
       <div
-        class="sc-gKXOVf hhbAk"
+        class="sc-iBkjds fTXLna"
         data-testid="voting"
       >
         <button
-          class="sc-iBkjds bidZKA"
+          class="sc-ftvSup jPGLgn"
           type="button"
         >
           <svg>
@@ -163,7 +163,7 @@ exports[`Comment from other user should render a comment 1`] = `
           12
         </p>
         <button
-          class="sc-iBkjds bidZKA"
+          class="sc-ftvSup jPGLgn"
           type="button"
         >
           <svg>
@@ -181,7 +181,7 @@ exports[`Comment from other user should render a comment 1`] = `
       class="buttons"
     >
       <button
-        class="sc-bczRLJ gbCjDT"
+        class="sc-gsnTZi dMLRiJ"
         type="button"
       >
         <svg>
