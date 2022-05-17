@@ -4,10 +4,15 @@ const GlobalStyle = createGlobalStyle(({ theme }) => ({
   '*, *::before, *::after': {
     boxSizing: 'border-box',
   },
-  'body, h1, h2, h3, p': {
+  'body, h1, h2, h3, p, ul': {
     margin: 0,
+    padding: 0,
   },
-  'h1, h2, h3, p': {
+  'h1, h2, h3': {
+    fontWeight: 500,
+    lineHeight: 1.1,
+  },
+  p: {
     fontWeight: 400,
   },
   body: {

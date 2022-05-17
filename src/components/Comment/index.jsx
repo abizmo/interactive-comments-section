@@ -20,14 +20,6 @@ function Comment({
   const [updating, setUpdating] = useState(false);
   const [votes, setVotes] = useState(comment.score || 0);
 
-  const startEdit = () => {
-    setUpdating(true);
-  };
-
-  const startReply = () => {
-    setReplying(true);
-  };
-
   const handleEdit = (c) => {
     onEdit(c);
     setUpdating(false);
@@ -36,6 +28,14 @@ function Comment({
   const handleReply = (r) => {
     onReply(r, comment.id, user.username);
     setReplying(false);
+  };
+
+  const startEdit = () => {
+    setUpdating(true);
+  };
+
+  const startReply = () => {
+    setReplying(true);
   };
 
   const at = replyingTo && `@${replyingTo} `;
@@ -83,7 +83,7 @@ function Comment({
                 color="secondary"
                 icon={Delete}
                 label="Delete"
-                onClick={onDelete}
+                onClick={() => onDelete(comment.id)}
               />
               <Button
                 color="primary"

@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import Comment from '../components/Comment';
+import Modal from '../components/Modal';
 import NewComment from '../components/NewComment';
 import { useComments } from '../context/comments';
 import {
@@ -29,6 +30,9 @@ const WrapperReplies = styled(Wrapper)`
 
 function Comments() {
   const { state: { comments, currentUser }, dispatch } = useComments();
+  const [deleting, setDeleting] = useState(false);
+  const [commentToDelete, setCommentToDelete] = useState(0);
+  const [replyToDelete, setReplyToDelete] = useState(0);
 
   useEffect(() => {
     dispatch(setComments(data));
@@ -40,6 +44,23 @@ function Comments() {
     if (!content) return;
 
     dispatch(createComment(content));
+  };
+
+  const handleDelete = () => {
+    if (replyToDelete !== 0) {
+      dispatch(deleteReply(commentToDelete, replyToDelete));
+    } else {
+      dispatch(deleteComment(commentToDelete));
+    }
+    setDeleting(false);
+    setCommentToDelete(0);
+    setReplyToDelete(0);
+  };
+
+  const startDelete = (commentId, replyId) => {
+    setDeleting(true);
+    setCommentToDelete(commentId);
+    setReplyToDelete(replyId);
   };
 
   const handleReply = (content, commentId, replyingTo) => {
@@ -55,7 +76,7 @@ function Comments() {
           <Comment
             comment={comment}
             currentUser={currentUser}
-            onDelete={() => dispatch(deleteComment(comment.id))}
+            onDelete={() => startDelete(comment.id)}
             onEdit={(c) => dispatch(updateComment(comment.id, c))}
             onReply={(r) => handleReply(r, comment.id, user.username)}
             user={user}
@@ -67,7 +88,7 @@ function Comments() {
                   key={reply.id}
                   comment={reply}
                   currentUser={currentUser}
-                  onDelete={() => dispatch(deleteReply(comment.id, reply.id))}
+                  onDelete={() => startDelete(comment.id, reply.id)}
                   onEdit={(r) => dispatch(updateReply(comment.id, reply.id, r))}
                   onReply={(r) => handleReply(r, comment.id, replier.username)}
                   replyingTo={replyingTo}
@@ -79,6 +100,9 @@ function Comments() {
         </React.Fragment>
       ))}
       <NewComment onCreate={handleCreate} user={currentUser} />
+      { deleting && (
+        <Modal onConfirm={handleDelete} onCancel={() => setDeleting(false)} />
+      )}
     </Wrapper>
   );
 }
