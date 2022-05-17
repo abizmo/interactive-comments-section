@@ -33,16 +33,12 @@ exports[`Comment from current user should render a comment 1`] = `
         1 month ago
       </span>
     </header>
-    <div
-      id="content"
-    >
+    <div>
       <p>
         Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
       </p>
     </div>
-    <div
-      id="votes"
-    >
+    <div>
       <div
         class="sc-gKXOVf hhbAk"
         data-testid="voting"
@@ -78,9 +74,7 @@ exports[`Comment from current user should render a comment 1`] = `
         </button>
       </div>
     </div>
-    <div
-      id="buttons"
-    >
+    <div>
       <button
         class="sc-bczRLJ bDIsdp"
         color="secondary"
@@ -134,16 +128,12 @@ exports[`Comment from other user should render a comment 1`] = `
         1 month ago
       </span>
     </header>
-    <div
-      id="content"
-    >
+    <div>
       <p>
         Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
       </p>
     </div>
-    <div
-      id="votes"
-    >
+    <div>
       <div
         class="sc-gKXOVf hhbAk"
         data-testid="voting"
@@ -179,9 +169,7 @@ exports[`Comment from other user should render a comment 1`] = `
         </button>
       </div>
     </div>
-    <div
-      id="buttons"
-    >
+    <div>
       <button
         class="sc-bczRLJ gbCjDT"
         color="primary"

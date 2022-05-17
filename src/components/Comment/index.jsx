@@ -52,7 +52,7 @@ function Comment({
           )}
           <span>{comment.createdAt}</span>
         </header>
-        <div id="content">
+        <div>
           {
           updating ? (
             <EditComment
@@ -72,10 +72,10 @@ function Comment({
           )
         }
         </div>
-        <div id="votes">
+        <div>
           <Voting onVote={setVotes} votes={votes} />
         </div>
-        <div id="buttons">
+        <div>
           {
           you ? (
             <>
