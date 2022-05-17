@@ -69,7 +69,6 @@ function EditComment({ at, content, onEdit }) {
         onFocus={handleFocus}
         placeholder="Add comment..."
         style={{ height: `${inputHeight}px` }}
-        type="text"
         value={`${at}${comment}`}
       />
       <Button
