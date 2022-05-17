@@ -394,7 +394,6 @@ exports[`renders Interactive comments section 1`] = `
         class="sc-jSMfEi dHgca"
         name="newComment"
         placeholder="Add comment..."
-        type="text"
       />
       <button
         class="sc-bczRLJ sc-gsnTZi gbCjDT jNxzwF"

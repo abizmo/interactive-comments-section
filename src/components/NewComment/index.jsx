@@ -81,7 +81,6 @@ function NewComment({ onCreate, replyingTo, user }) {
         name="newComment"
         onChange={({ target }) => setComment(target.value)}
         placeholder="Add comment..."
-        type="text"
         value={comment}
       />
       <Button
